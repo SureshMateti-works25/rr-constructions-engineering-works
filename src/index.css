@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-blue: #0066CC;
+    --brand-blue-hover: #0052CC;
+    --brand-blue-light: #E0F2FE;
+    --brand-cyan: #00A3FF;
+    --brand-navy: #0B2545;
+    --brand-navy-dark: #071527;
+    --brand-navy-card: #0F1E36;
+    --brand-amber: #F59E0B;
+    --brand-orange: #FF6600;
+    --slate-bg: #071527;
+    --card-bg: #0F1E36;
+    --border-color: #1E3A5F;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+    color-scheme: dark;
+    background-color: #071527;
+    color: #F8FAFC;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #071527;
+    color: #F8FAFC;
+    min-height: 100dvh;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Accessible Modern Dialog styles compliant with modern-web-guidance */
+  dialog:modal {
+    overscroll-behavior: contain;
+    border: none;
+    padding: 0;
+    background: transparent;
+    max-inline-size: 96vw;
+    max-block-size: 92dvh;
+  }
+
+  dialog::backdrop {
+    overflow: hidden;
+    overscroll-behavior: contain;
+    background-color: rgba(7, 21, 39, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+/* Custom surface colors matching RR Constructions flyer */
+.bg-brand-navy {
+  background-color: #0B2545;
+}
+.bg-brand-dark {
+  background-color: #071527;
+}
+.bg-brand-card {
+  background-color: #0F1E36;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #071527;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E3A5F;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00A3FF;
+}
+
+/* Royal Blue & Electric Cyan Gradients */
+.brand-royal-gradient {
+  background: linear-gradient(135deg, #00A3FF 0%, #0066CC 50%, #004099 100%);
+}
+
+.brand-navy-gradient {
+  background: linear-gradient(135deg, #0B2545 0%, #0F1E36 50%, #071527 100%);
+}
+
+.royal-gradient-text {
+  background: linear-gradient(135deg, #38BDF8 0%, #00A3FF 50%, #60A5FA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vibrant-blue-glow {
+  box-shadow: 0 0 28px -4px rgba(0, 163, 255, 0.4);
+}
+
+.vibrant-blue-border {
+  border-color: rgba(0, 163, 255, 0.45);
+}
+
+/* Modern Accessible Accordion Transitions compliant with modern-web-guidance */
+details.house-type-accordion {
+  transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+details.house-type-accordion::details-content {
+  transition: height 0.35s ease, content-visibility 0.35s allow-discrete;
+  height: 0;
+  overflow: clip;
+}
+
+details.house-type-accordion[open]::details-content {
+  height: auto;
+}
+
+/* Keyframe animations for active construction trackers & flyer ribbons */
+@keyframes vibrant-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animate-vibrant-shimmer {
+  background-size: 200% 100%;
+  animation: vibrant-shimmer 3s linear infinite;
+}
+
+/* Elevation card shadow */
+.rr-card {
+  background: #0F1E36;
+  border: 1px solid #1E3A5F;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.rr-card:hover {
+  transform: translateY(-4px);
+  border-color: #00A3FF;
+  box-shadow: 0 20px 25px -5px rgba(0, 102, 204, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+}
+
+/* Print styles specifically for the Official Flyer */
+@media print {
+  nav, footer, .no-print, #whatsapp-float, .interactive-controls, dialog {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #071527 !important;
+    font-size: 11pt !important;
+  }
+
+  .print-only-flyer {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    color: #071527 !important;
+    background: #ffffff !important;
+  }
+
+  .flyer-print-container {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
