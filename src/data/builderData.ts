@@ -196,7 +196,7 @@ export const PROJECTS_DATA: Project[] = [
     clientQuote: {
       author: 'Srinivas & Madhavi Rao',
       locality: 'Tellapur, Hyderabad',
-      text: 'Being in the US, monitoring our home construction in Hyderabad was our biggest fear. BuildX Homes eliminated all stress with their live CCTV app and weekly drone logs. Delivered 2 weeks ahead of time without 1 rupee of extra cost!',
+      text: 'Being in the US, monitoring our home construction in Hyderabad was our biggest fear. RR Constructions eliminated all stress with their live CCTV app and weekly drone logs. Delivered 2 weeks ahead of time without 1 rupee of extra cost!',
       rating: 5
     }
   },
@@ -271,7 +271,7 @@ export const PROJECTS_DATA: Project[] = [
     clientQuote: {
       author: 'Karthik & Sneha Reddy',
       locality: 'Gachibowli, Hyderabad',
-      text: 'The best decision was choosing BuildX’s Premium package. Clear fixed-price BOQ, zero escalation, and complete transparency on material delivery slips.',
+      text: 'The best decision was choosing RR Constructions’s Premium package. Clear fixed-price BOQ, zero escalation, and complete transparency on material delivery slips.',
       rating: 5
     }
   },
@@ -339,7 +339,7 @@ export const PROJECTS_DATA: Project[] = [
     clientQuote: {
       author: 'M. Venkat & Lakshmi',
       locality: 'Manikonda, Hyderabad',
-      text: 'BuildX helped us get GHMC building approval smoothly. The construction was completed cleanly and handed over exactly on the promised date.',
+      text: 'RR Constructions helped us get GHMC building approval smoothly. The construction was completed cleanly and handed over exactly on the promised date.',
       rating: 5
     }
   },
@@ -764,7 +764,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     rating: 5,
     date: 'December 2025',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-    feedback: 'Living in the US while constructing our dream home in Tellapur seemed like an impossible challenge. BuildX.Homes made it completely seamless. Their mobile app gave us live CCTV camera feeds, daily milestone photos, and itemized material delivery receipts. Delivered 14 days ahead of schedule with zero price escalation!',
+    feedback: 'Living in the US while constructing our dream home in Tellapur seemed like an impossible challenge. RR Constructions made it completely seamless. Their mobile app gave us live CCTV camera feeds, daily milestone photos, and itemized material delivery receipts. Delivered 14 days ahead of schedule with zero price escalation!',
     metrics: 'Delivered 14 days early • Zero price escalation'
   },
   {
@@ -788,7 +788,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     rating: 5,
     date: 'November 2025',
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
-    feedback: 'BuildX Homes provides the transparency the Hyderabad construction industry desperately needed. Every milestone payment is linked to verified work on the app. The finishes, Kohler fittings, and tile alignment are hotel-grade.',
+    feedback: 'RR Constructions provides the transparency the Hyderabad construction industry desperately needed. Every milestone payment is linked to verified work on the app. The finishes, Kohler fittings, and tile alignment are hotel-grade.',
     metrics: 'Sub-millimeter tile joints • 10-Yr Warranty'
   }
 ];
@@ -809,7 +809,7 @@ export const PARTNERS_DATA: Partner[] = [
   {
     name: 'ICICI Bank Home Finance',
     type: 'Bank & Finance',
-    tagline: 'Exclusive preferential interest rates for BuildX Homes projects',
+    tagline: 'Exclusive preferential interest rates for RR Constructions projects',
     badge: 'Category A+ Preferred Partner'
   },
   {
@@ -848,8 +848,8 @@ export const FAQS_DATA: FAQItem[] = [
   {
     id: 'faq-1',
     category: 'Pricing & Escalation',
-    question: 'How does BuildX guarantee "Zero Cost Overruns" and "Zero Price Escalation"?',
-    answer: 'Once your detailed Bill of Quantities (BOQ) is finalized and signed, BuildX locks your per-sq.ft rate into a legally binding contract. Even if steel and cement prices surge during the 10–12 month construction period in Hyderabad, we absorb 100% of material fluctuations. Your price per square foot remains exactly as contracted.'
+    question: 'How does RR Constructions guarantee "Zero Cost Overruns" and "Zero Price Escalation"?',
+    answer: 'Once your detailed Bill of Quantities (BOQ) is finalized and signed, RR Constructions locks your per-sq.ft rate into a legally binding contract. Even if steel and cement prices surge during the 10–12 month construction period in Hyderabad, we absorb 100% of material fluctuations. Your price per square foot remains exactly as contracted.'
   },
   {
     id: 'faq-2',
@@ -867,7 +867,7 @@ export const FAQS_DATA: FAQItem[] = [
     id: 'faq-4',
     category: 'NRI & Remote Tracking',
     question: 'I reside in the USA / outside Hyderabad. How do I track daily progress?',
-    answer: 'We install high-definition 360-degree PTZ cameras on your plot before excavation starts. You receive secure login credentials to the BuildX Client App to watch live camera streams 24/7, view daily photographic logs, track labor attendance, and inspect NABL cube test reports from anywhere in the world.'
+    answer: 'We install high-definition 360-degree PTZ cameras on your plot before excavation starts. You receive secure login credentials to the RR Client App to watch live camera streams 24/7, view daily photographic logs, track labor attendance, and inspect NABL cube test reports from anywhere in the world.'
   },
   {
     id: 'faq-5',
