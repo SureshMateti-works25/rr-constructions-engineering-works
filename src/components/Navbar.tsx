@@ -43,8 +43,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 no-print ${
           isScrolled
-            ? 'bg-[#071527]/95 backdrop-blur-md border-b border-[#1E3A5F] shadow-2xl py-2 sm:py-2.5'
-            : 'bg-[#071527]/90 backdrop-blur-sm border-b border-[#1E3A5F]/80 py-3 sm:py-4 shadow-lg'
+            ? 'bg-gradient-to-r from-[#05111F]/98 via-[#081B33]/98 to-[#05111F]/98 backdrop-blur-xl border-b border-cyan-500/25 shadow-[0_10px_35px_rgba(0,0,0,0.6)] py-2 sm:py-2.5'
+            : 'bg-gradient-to-r from-[#061426]/95 via-[#0A2242]/95 to-[#061426]/95 backdrop-blur-md border-b border-cyan-500/20 py-3 sm:py-4 shadow-xl'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

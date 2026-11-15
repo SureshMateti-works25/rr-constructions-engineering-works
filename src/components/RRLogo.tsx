@@ -20,13 +20,13 @@ export const RRLogo: React.FC<RRLogoProps> = ({
       case 'sm':
         return 'w-10 h-10';
       case 'md':
-        return 'w-12 h-12';
+        return 'w-12 h-12 sm:w-[3.25rem] sm:h-[3.25rem]';
       case 'lg':
         return 'w-16 h-16';
       case 'xl':
-        return 'w-24 h-24';
+        return 'w-24 h-24 sm:w-28 sm:h-28';
       default:
-        return 'w-12 h-12';
+        return 'w-12 h-12 sm:w-[3.25rem] sm:h-[3.25rem]';
     }
   };
 
@@ -44,13 +44,16 @@ export const RRLogo: React.FC<RRLogoProps> = ({
 
   return (
     <div className={`flex items-center gap-3.5 ${className}`}>
-      {/* Precision Vector Emblem matching the visiting card / flyer */}
-      <div className={`${getIconSize()} relative shrink-0 flex items-center justify-center filter drop-shadow-md`}>
+      {/* Precision Vector Emblem with Trendy Matched Architectural Badge */}
+      <div 
+        className={`${getIconSize()} relative shrink-0 flex items-center justify-center p-1.5 sm:p-2 rounded-xl sm:rounded-2xl bg-gradient-to-br from-white via-[#F6FAFF] to-[#E3EFFF] shadow-[0_4px_18px_rgba(0,163,255,0.25)] border border-white/90 ring-1 ring-cyan-400/35 group-hover:ring-cyan-400/80 group-hover:shadow-[0_4px_24px_rgba(0,163,255,0.45)] group-hover:scale-105 transition-all duration-300`}
+        title="RR Constructions & Engineering Works"
+      >
         <svg
-          viewBox="0 0 200 180"
+          viewBox="20 -8 160 144"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full"
+          className="w-full h-full filter drop-shadow-sm"
         >
           {/* Skyscraper towers in background */}
           <path
@@ -72,7 +75,7 @@ export const RRLogo: React.FC<RRLogoProps> = ({
           {/* House Roof Gable */}
           <path
             d="M60 62L100 32L140 62H128L100 41L72 62H60Z"
-            fill="#0B2545"
+            fill="url(#firstRGrad)"
           />
           {/* 4-Pane Square Window inside Attic */}
           <rect x="94" y="47" width="5.5" height="5.5" fill="#00A3FF" />
@@ -80,10 +83,10 @@ export const RRLogo: React.FC<RRLogoProps> = ({
           <rect x="94" y="54" width="5.5" height="5.5" fill="#00A3FF" />
           <rect x="101" y="54" width="5.5" height="5.5" fill="#00A3FF" />
 
-          {/* First "R" (Deep Navy) */}
+          {/* First "R" (Deep Sapphire Navy with High-Contrast Definition) */}
           <path
             d="M48 68H84C95.598 68 102 74.2 102 83.5C102 91.5 96.5 96.8 89 98.2L104 122H86L73 101H65V122H48V68ZM65 89H82C86.5 89 89 86.8 89 83.5C89 80.2 86.5 78 82 78H65V89Z"
-            fill="#0B2545"
+            fill="url(#firstRGrad)"
           />
 
           {/* Second "R" (Electric Royal Blue) */}
@@ -98,10 +101,15 @@ export const RRLogo: React.FC<RRLogoProps> = ({
             fill="url(#swooshGrad)"
           />
 
-          {/* Gradients matching visiting card */}
+          {/* Gradients matching visiting card & corporate identity */}
           <defs>
+            <linearGradient id="firstRGrad" x1="48" y1="68" x2="104" y2="122" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#071E3D" />
+              <stop offset="0.65" stopColor="#0B2A52" />
+              <stop offset="1" stopColor="#103A6E" />
+            </linearGradient>
             <linearGradient id="skylineGrad1" x1="95" y1="8" x2="108" y2="58" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#0B2545" />
+              <stop stopColor="#071E3D" />
               <stop offset="1" stopColor="#0066CC" />
             </linearGradient>
             <linearGradient id="skylineGrad2" x1="110" y1="0" x2="124" y2="58" gradientUnits="userSpaceOnUse">
@@ -110,7 +118,7 @@ export const RRLogo: React.FC<RRLogoProps> = ({
             </linearGradient>
             <linearGradient id="skylineGrad3" x1="126" y1="18" x2="138" y2="58" gradientUnits="userSpaceOnUse">
               <stop stopColor="#38BDF8" />
-              <stop offset="1" stopColor="#0B2545" />
+              <stop offset="1" stopColor="#071E3D" />
             </linearGradient>
             <linearGradient id="blueRGrad" x1="102" y1="68" x2="158" y2="122" gradientUnits="userSpaceOnUse">
               <stop stopColor="#00A3FF" />
