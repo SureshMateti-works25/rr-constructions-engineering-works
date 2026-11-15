@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { FileText, Menu, X, Sparkles, Phone, ShieldCheck } from 'lucide-react';
+import { FileText, Menu, X, Sparkles, Phone, ShieldCheck, Home } from 'lucide-react';
 import { COMPANY_INFO } from '../data/builderData';
 import { RRLogo } from './RRLogo';
+import type { PageId } from './PageHeader';
 
 interface NavbarProps {
+  currentPage: PageId;
+  onNavigate: (page: PageId) => void;
   onOpenConsultation: () => void;
   onOpenFlyer: () => void;
-  onScrollToEstimator: () => void;
+  onScrollToEstimator?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
+  currentPage,
+  onNavigate,
   onOpenConsultation,
   onOpenFlyer,
 }) => {
@@ -25,12 +30,12 @@ export const Navbar: React.FC<NavbarProps> = ({
   }, []);
 
   // Top menu strictly reduced to the user's requested 5 main items
-  const mainNavItems = [
-    { label: 'Services', href: '#services' },
-    { label: 'Packages', href: '#packages' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Process', href: '#process' },
-    { label: 'FAQ', href: '#faq' },
+  const mainNavItems: { label: string; id: PageId }[] = [
+    { label: 'Services', id: 'services' },
+    { label: 'Packages', id: 'packages' },
+    { label: 'Projects', id: 'projects' },
+    { label: 'Process', id: 'process' },
+    { label: 'FAQ', id: 'faq' },
   ];
 
   return (
@@ -45,8 +50,13 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
             
-            {/* Top Left: BIG Logo & Company Name */}
-            <a href="#" className="flex items-center gap-3 group shrink-0">
+            {/* Top Left: BIG Logo & Company Name (Clicking returns to Home page) */}
+            <button 
+              type="button"
+              onClick={() => onNavigate('home')} 
+              className="flex items-center gap-3 group shrink-0 text-left cursor-pointer focus:outline-none"
+              title="Return to RR Constructions Home Page"
+            >
               <RRLogo size="md" showTagline={true} />
               
               {/* Official Credentials Badge (visible on larger screens) */}
@@ -59,20 +69,47 @@ export const Navbar: React.FC<NavbarProps> = ({
                   GST: {COMPANY_INFO.gstin}
                 </span>
               </div>
-            </a>
+            </button>
 
             {/* Desktop Navigation: REDUCED TO MAIN 5 ITEMS */}
-            <nav className="hidden lg:flex items-center space-x-1 xl:space-x-3 text-sm font-bold text-slate-200">
-              {mainNavItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="px-3.5 py-2 rounded-xl text-slate-200 hover:text-cyan-300 hover:bg-[#0B2545] transition-all relative group"
-                >
-                  <span>{item.label}</span>
-                  <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-[#00A3FF] scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full" />
-                </a>
-              ))}
+            <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2 text-sm font-bold text-slate-200">
+              {/* Home Icon Pill */}
+              <button
+                type="button"
+                onClick={() => onNavigate('home')}
+                className={`p-2 rounded-xl transition-all cursor-pointer ${
+                  currentPage === 'home'
+                    ? 'bg-[#0066CC] text-white shadow-md shadow-blue-500/25 ring-1 ring-cyan-400/50'
+                    : 'text-slate-300 hover:text-cyan-300 hover:bg-[#0B2545]'
+                }`}
+                title="Home Page"
+                aria-label="Home Page"
+              >
+                <Home className="w-4 h-4" />
+              </button>
+
+              {mainNavItems.map((item) => {
+                const isActive = currentPage === item.id;
+                return (
+                  <button
+                    key={item.label}
+                    type="button"
+                    onClick={() => onNavigate(item.id)}
+                    className={`px-3.5 py-2 rounded-xl transition-all cursor-pointer relative group text-sm font-bold ${
+                      isActive
+                        ? 'bg-gradient-to-r from-[#0066CC] to-[#00A3FF] text-white shadow-md shadow-blue-500/25 ring-1 ring-cyan-400/50'
+                        : 'text-slate-200 hover:text-cyan-300 hover:bg-[#0B2545]'
+                    }`}
+                  >
+                    <span>{item.label}</span>
+                    {isActive ? (
+                      <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-cyan-300 rounded-full" />
+                    ) : (
+                      <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-[#00A3FF] scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full" />
+                    )}
+                  </button>
+                );
+              })}
             </nav>
 
             {/* Right: Phone Call, Download Flyer & Quote CTA */}
@@ -99,31 +136,32 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <span>Download Flyer</span>
               </button>
 
-              {/* Book Free Quote Button */}
+              {/* Quote CTA */}
               <button
                 type="button"
                 onClick={onOpenConsultation}
-                className="inline-flex items-center gap-2 px-4 py-2 text-xs uppercase tracking-wider font-extrabold text-white bg-gradient-to-r from-[#00A3FF] via-[#0066CC] to-[#004099] hover:brightness-110 rounded-xl shadow-md shadow-blue-500/25 transition-all hover:scale-102 cursor-pointer"
+                className="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-[#00A3FF] via-[#0066CC] to-[#004099] hover:brightness-110 rounded-xl shadow-md shadow-blue-500/25 transition-all cursor-pointer hover:scale-[1.02]"
               >
-                <Sparkles className="w-3.5 h-3.5 text-white" />
+                <Sparkles className="w-3.5 h-3.5 text-cyan-300" />
                 <span>Get Free Quote</span>
               </button>
             </div>
 
-            {/* Mobile Hamburger Menu Toggle */}
+            {/* Mobile Menu Hamburger */}
             <div className="flex lg:hidden items-center gap-2">
               <button
                 type="button"
                 onClick={onOpenFlyer}
-                className="p-2 text-cyan-300 bg-blue-900/40 border border-blue-500/30 rounded-xl"
-                title="View Flyer"
+                className="p-2 text-cyan-400 bg-[#0F223D] border border-[#1E3A5F] rounded-lg"
+                title="Flyer"
               >
                 <FileText className="w-4 h-4" />
               </button>
+
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 text-slate-300 hover:text-white bg-[#0B2545] rounded-xl border border-[#1E3A5F]"
+                className="p-2 text-slate-300 hover:text-white bg-[#0F223D] border border-[#1E3A5F] rounded-lg cursor-pointer"
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -134,17 +172,16 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
       </header>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden flex flex-col no-print">
-          <div
+        <div className="fixed inset-0 z-50 lg:hidden">
+          <div 
             className="fixed inset-0 bg-black/80 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
           />
-
-          <div className="relative ml-auto w-4/5 max-w-sm h-full bg-[#071527] border-l border-[#1E3A5F] p-6 flex flex-col justify-between overflow-y-auto">
+          <div className="fixed top-0 right-0 bottom-0 w-5/6 max-w-sm bg-[#071527] border-l border-[#1E3A5F] p-6 shadow-2xl overflow-y-auto flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between pb-6 border-b border-[#1E3A5F]">
+              <div className="flex items-center justify-between pb-4 border-b border-[#1E3A5F]">
                 <RRLogo size="sm" showTagline={false} />
                 <button
                   type="button"
@@ -170,17 +207,51 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
 
               {/* 5 Main Nav Items in Mobile Drawer */}
-              <div className="py-2 space-y-1">
-                {mainNavItems.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-3 rounded-xl text-base font-bold text-slate-200 hover:bg-[#0B2545] hover:text-cyan-300 transition-colors"
-                  >
-                    {item.label}
-                  </a>
-                ))}
+              <div className="py-2 space-y-1.5">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    onNavigate('home');
+                  }}
+                  className={`w-full text-left px-4 py-3 rounded-xl text-base font-bold transition-colors cursor-pointer flex items-center justify-between ${
+                    currentPage === 'home'
+                      ? 'bg-[#0066CC] text-white shadow-md'
+                      : 'text-slate-200 hover:bg-[#0B2545] hover:text-cyan-300'
+                  }`}
+                >
+                  <span className="flex items-center gap-2.5">
+                    <Home className="w-4 h-4 text-cyan-400" />
+                    <span>Home Page</span>
+                  </span>
+                  {currentPage === 'home' && (
+                    <span className="text-xs text-cyan-200 bg-white/20 px-2 py-0.5 rounded-full">Active</span>
+                  )}
+                </button>
+
+                {mainNavItems.map((item) => {
+                  const isActive = currentPage === item.id;
+                  return (
+                    <button
+                      key={item.label}
+                      type="button"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        onNavigate(item.id);
+                      }}
+                      className={`w-full text-left px-4 py-3 rounded-xl text-base font-bold transition-colors cursor-pointer flex items-center justify-between ${
+                        isActive
+                          ? 'bg-[#0066CC] text-white shadow-md'
+                          : 'text-slate-200 hover:bg-[#0B2545] hover:text-cyan-300'
+                      }`}
+                    >
+                      <span>{item.label}</span>
+                      {isActive && (
+                        <span className="text-xs text-cyan-200 bg-white/20 px-2 py-0.5 rounded-full">Viewing</span>
+                      )}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 

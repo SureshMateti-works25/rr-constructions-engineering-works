@@ -13,11 +13,13 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { COMPANY_INFO } from '../data/builderData';
+import type { PageId } from './PageHeader';
 
 interface HeroProps {
   onOpenConsultation: () => void;
   onScrollToEstimator: () => void;
   onOpenFlyer: () => void;
+  onNavigate?: (page: PageId) => void;
   onOpenProjectModal?: (projectId: string) => void;
 }
 
@@ -25,6 +27,7 @@ export const Hero: React.FC<HeroProps> = ({
   onOpenConsultation,
   onScrollToEstimator,
   onOpenFlyer,
+  onNavigate,
 }) => {
   const [plotYards, setPlotYards] = useState('200');
   const [floors, setFloors] = useState('G+2');
@@ -150,22 +153,38 @@ export const Hero: React.FC<HeroProps> = ({
 
             {/* 4 Core Pillars Direct from Visiting Card */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
-              <div className="bg-[#0F1E36] p-3 rounded-xl border border-[#1E3A5F] hover:border-cyan-400 transition-colors">
-                <div className="text-xs font-black text-white">Constructions</div>
-                <div className="text-[10px] text-cyan-300 font-medium">Residential &amp; Turnkey</div>
-              </div>
-              <div className="bg-[#0F1E36] p-3 rounded-xl border border-[#1E3A5F] hover:border-cyan-400 transition-colors">
-                <div className="text-xs font-black text-white">Metal Structural</div>
-                <div className="text-[10px] text-cyan-300 font-medium">Steel Sheds &amp; PEB</div>
-              </div>
-              <div className="bg-[#0F1E36] p-3 rounded-xl border border-[#1E3A5F] hover:border-cyan-400 transition-colors">
-                <div className="text-xs font-black text-white">Designing Works</div>
-                <div className="text-[10px] text-cyan-300 font-medium">AutoCAD 2D &amp; 3D Render</div>
-              </div>
-              <div className="bg-[#0F1E36] p-3 rounded-xl border border-[#1E3A5F] hover:border-cyan-400 transition-colors">
-                <div className="text-xs font-black text-white">Flooring Works</div>
-                <div className="text-[10px] text-cyan-300 font-medium">Epoxy &amp; PU Flooring</div>
-              </div>
+              <button 
+                type="button" 
+                onClick={() => onNavigate && onNavigate('services')} 
+                className="bg-[#0F1E36] p-3 rounded-xl border border-[#1E3A5F] hover:border-cyan-400 hover:bg-[#16335C] transition-all cursor-pointer text-left group"
+              >
+                <div className="text-xs font-black text-white group-hover:text-cyan-300">Constructions</div>
+                <div className="text-[10px] text-cyan-300 font-medium">Residential &amp; Turnkey →</div>
+              </button>
+              <button 
+                type="button" 
+                onClick={() => onNavigate && onNavigate('services')} 
+                className="bg-[#0F1E36] p-3 rounded-xl border border-[#1E3A5F] hover:border-cyan-400 hover:bg-[#16335C] transition-all cursor-pointer text-left group"
+              >
+                <div className="text-xs font-black text-white group-hover:text-cyan-300">Metal Structural</div>
+                <div className="text-[10px] text-cyan-300 font-medium">Steel Sheds &amp; PEB →</div>
+              </button>
+              <button 
+                type="button" 
+                onClick={() => onNavigate && onNavigate('services')} 
+                className="bg-[#0F1E36] p-3 rounded-xl border border-[#1E3A5F] hover:border-cyan-400 hover:bg-[#16335C] transition-all cursor-pointer text-left group"
+              >
+                <div className="text-xs font-black text-white group-hover:text-cyan-300">Designing Works</div>
+                <div className="text-[10px] text-cyan-300 font-medium">AutoCAD 2D &amp; 3D Render →</div>
+              </button>
+              <button 
+                type="button" 
+                onClick={() => onNavigate && onNavigate('services')} 
+                className="bg-[#0F1E36] p-3 rounded-xl border border-[#1E3A5F] hover:border-cyan-400 hover:bg-[#16335C] transition-all cursor-pointer text-left group"
+              >
+                <div className="text-xs font-black text-white group-hover:text-cyan-300">Flooring Works</div>
+                <div className="text-[10px] text-cyan-300 font-medium">Epoxy &amp; PU Flooring →</div>
+              </button>
             </div>
 
             {/* Trust Highlights */}
@@ -201,7 +220,7 @@ export const Hero: React.FC<HeroProps> = ({
 
               <button
                 type="button"
-                onClick={onScrollToEstimator}
+                onClick={() => onNavigate ? onNavigate('packages') : onScrollToEstimator()}
                 className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white bg-[#0F1E36] hover:bg-[#1E3A5F] border border-[#1E3A5F] shadow-sm transition-all cursor-pointer"
               >
                 <Calculator className="w-4 h-4 text-cyan-400" />
