@@ -141,7 +141,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <span className="text-cyan-500">•</span>
                 <span>SHAPING TOMORROW</span>
               </div>
-              <h1 className="text-3xl sm:text-5xl lg:text-[3.25rem] font-black tracking-tight text-white leading-[1.12]">
+              <h1 className="text-2xl sm:text-4xl lg:text-[2.75rem] font-black tracking-tight text-white leading-[1.15]">
                 RR CONSTRUCTIONS &amp; <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-sky-300 bg-clip-text text-transparent">ENGINEERING WORKS</span>
               </h1>
             </div>

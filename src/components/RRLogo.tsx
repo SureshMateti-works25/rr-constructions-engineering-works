@@ -18,15 +18,15 @@ export const RRLogo: React.FC<RRLogoProps> = ({
   const getIconSize = () => {
     switch (size) {
       case 'sm':
-        return 'w-10 h-10';
+        return 'w-11 h-11 sm:w-12 sm:h-12';
       case 'md':
-        return 'w-12 h-12 sm:w-[3.25rem] sm:h-[3.25rem]';
+        return 'w-14 h-14 sm:w-16 sm:h-16';
       case 'lg':
-        return 'w-16 h-16';
+        return 'w-18 h-18 sm:w-20 sm:h-20';
       case 'xl':
-        return 'w-24 h-24 sm:w-28 sm:h-28';
+        return 'w-28 h-28 sm:w-32 sm:h-32';
       default:
-        return 'w-12 h-12 sm:w-[3.25rem] sm:h-[3.25rem]';
+        return 'w-14 h-14 sm:w-16 sm:h-16';
     }
   };
 
@@ -134,34 +134,33 @@ export const RRLogo: React.FC<RRLogoProps> = ({
         </svg>
       </div>
 
-      {/* Big Authoritative Typography Block */}
+      {/* Refined Executive Typography Block */}
       {showText && (
         <div className="flex flex-col">
           <div className="flex items-center gap-1.5">
             <span className={`font-black tracking-tight leading-none ${getTextColor()} ${
               size === 'sm' 
-                ? 'text-lg sm:text-xl' 
+                ? 'text-xs sm:text-sm' 
                 : size === 'lg' 
-                  ? 'text-2xl sm:text-3xl' 
+                  ? 'text-lg sm:text-xl' 
                   : size === 'xl' 
-                    ? 'text-3xl sm:text-4xl' 
-                    : 'text-xl sm:text-2xl'
+                    ? 'text-xl sm:text-2xl' 
+                    : 'text-sm sm:text-base lg:text-[1.05rem]'
             }`}>
               RR CONSTRUCTIONS
             </span>
           </div>
-          <span className={`font-extrabold uppercase tracking-wider text-cyan-400 leading-tight mt-0.5 ${
-            size === 'sm' ? 'text-[10px]' : size === 'lg' ? 'text-xs sm:text-sm' : 'text-[11px] sm:text-xs'
+          <span className={`font-bold uppercase tracking-wider text-cyan-400 leading-tight mt-0.5 ${
+            size === 'sm' ? 'text-[8px]' : size === 'lg' ? 'text-[10px] sm:text-xs' : 'text-[8.5px] sm:text-[9.5px]'
           }`}>
             &amp; ENGINEERING WORKS
           </span>
           {showTagline && (
-            <div className="flex items-center gap-1.5 mt-1">
-              <span className="w-2.5 h-0.5 bg-[#00A3FF] rounded-full" />
-              <span className={`text-[9px] uppercase tracking-widest font-extrabold ${getSubTextColor()}`}>
+            <div className="hidden sm:flex items-center gap-1.5 mt-1">
+              <span className="w-1.5 h-0.5 bg-[#00A3FF] rounded-full" />
+              <span className={`text-[8px] uppercase tracking-widest font-bold ${getSubTextColor()}`}>
                 BUILDING TRUST, DELIVERING QUALITY
               </span>
-              <span className="w-2.5 h-0.5 bg-[#00A3FF] rounded-full" />
             </div>
           )}
         </div>

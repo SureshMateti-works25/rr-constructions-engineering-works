@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="flex items-center gap-3 group shrink-0 text-left cursor-pointer focus:outline-none"
               title="Return to RR Constructions Home Page"
             >
-              <RRLogo size="md" showTagline={true} />
+              <RRLogo size="md" showTagline={false} />
               
               {/* Official Credentials Badge (visible on larger screens) */}
               <div className="hidden 2xl:flex flex-col border-l border-[#1E3A5F] pl-3 py-0.5">
