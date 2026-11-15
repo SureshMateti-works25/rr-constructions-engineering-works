@@ -64,7 +64,7 @@ export const SERVICES_DATA: Service[] = [
     title: 'Constructions',
     tagline: 'Residential, Commercial, Industrial & Turnkey Projects',
     iconName: 'Home',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/civil-construction-in-progress.jpg',
     description: 'Complete civil and architectural construction across Andhra Pradesh & Telangana. From luxury residential duplexes and commercial office buildings to heavy industrial warehouses, executed under single-point turnkey responsibility.',
     deliverables: [
       'Residential Buildings (Custom Duplexes, Luxury Villas & Multi-Storey)',
@@ -81,7 +81,7 @@ export const SERVICES_DATA: Service[] = [
     title: 'Metal Structural Works',
     tagline: 'Steel Fabrication, Erection & Industrial Sheds',
     iconName: 'Building2',
-    image: 'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/metal-structural-peb-erection.jpg',
     description: 'State-of-the-art metal engineering, high-tensile steel fabrication, and on-site structural erection. We manufacture and install heavy industrial sheds, pre-engineered buildings (PEB), mezzanines, and industrial canopy structures.',
     deliverables: [
       'Steel Fabrication (CNC cutting, plasma bevelling, certified welding)',
@@ -97,7 +97,7 @@ export const SERVICES_DATA: Service[] = [
     title: 'Designing Works',
     tagline: '2D AutoCAD, 3D Elevation, Structural & Shop Drawings',
     iconName: 'Compass',
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80',
     description: 'Full-spectrum architectural, structural, and mechanical engineering design. We produce 100% Vastu-compliant layouts, photorealistic 3D elevations, STAAD-Pro structural designs, and detailed steel fabrication shop drawings.',
     deliverables: [
       '2D AutoCAD Drawings (Architectural plans, working & GFC drawings)',
@@ -113,7 +113,7 @@ export const SERVICES_DATA: Service[] = [
     title: 'Flooring Works',
     tagline: 'Epoxy, PU, Industrial, Anti-Static & Commercial Flooring',
     iconName: 'Layers',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/industrial-epoxy-flooring.jpg',
     description: 'Specialized chemical and performance flooring systems for pharmaceutical plants, industrial warehouses, electronic assembly clean rooms, commercial complexes, and luxury parking bays.',
     deliverables: [
       'Epoxy Flooring (Self-leveling chemical, abrasion & impact resistant)',
@@ -146,7 +146,7 @@ export const SERVICES_DATA: Service[] = [
     title: 'Digital Project Tracking & 24/7 Live CCTV',
     tagline: 'Watch your project progress live from anywhere in the world',
     iconName: 'ShieldCheck',
-    image: 'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/civil-construction-in-progress.jpg',
     description: 'Designed especially for business owners, busy professionals, and NRIs. We install 360-degree HD CCTV cameras on your site. Receive daily photo logs, material test reports, and approve milestone bills directly on your phone.',
     deliverables: [
       'Dedicated 24/7 live video stream accessible via iOS and Android',
@@ -909,7 +909,7 @@ export const HOUSE_TYPES_DATA: HouseType[] = [
     ],
     galleryViews: [
       { label: 'Day Elevation', url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', caption: 'Front elevation with wooden privacy louvers and double-height architectural glazing' },
-      { label: 'Night Facade', url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80', caption: 'Warm exterior architectural lighting and illuminated terrace party pergola' },
+      { label: 'Night Facade', url: '/images/modern-luxury-duplex-night.jpg', caption: 'Warm exterior architectural lighting and illuminated terrace party pergola' },
       { label: '3D Floor Plan', url: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80', caption: 'Spatial 3D CAD layout with East-facing Vastu kitchen, pooja & master suites' },
       { label: 'Living Pavilion', url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80', caption: '20ft double-height living room with acoustic floor-to-ceiling glass vista' }
     ]
@@ -919,7 +919,7 @@ export const HOUSE_TYPES_DATA: HouseType[] = [
     name: 'Central Courtyard & Tropical Vastu Sanctuaries',
     tagline: 'Indoor-outdoor living with an open-to-sky central courtyard',
     iconName: 'Compass',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/traditional-andhra-manduva-courtyard.jpg',
     idealPlot: '250 to 350 Sq. Yards (East/North Facing)',
     builtUpArea: '3,400 to 4,200 sq.ft',
     facing: 'Strict Vastu Brahmasthan Centered',
@@ -938,9 +938,9 @@ export const HOUSE_TYPES_DATA: HouseType[] = [
       'Second Floor: Open Terrace Pavilion, Yoga Deck, Solar Hybrid Plant'
     ],
     galleryViews: [
-      { label: 'Courtyard View', url: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80', caption: 'Open-to-sky central courtyard (Brahmasthan) bringing natural ventilation to all rooms' },
-      { label: 'Elevation', url: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80', caption: 'Terracotta jali facade providing passive thermal cooling in summer' },
-      { label: 'Floor Plan', url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80', caption: 'Vastu-certified spatial layout with water feature and elder ground suite' }
+      { label: 'Courtyard View', url: '/images/traditional-andhra-manduva-courtyard.jpg', caption: 'Open-to-sky central courtyard (Brahmasthan) with carved teak pillars & floating marigold urli' },
+      { label: 'Elevation', url: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80', caption: 'Terracotta jali facade providing passive thermal cooling in summer' },
+      { label: 'Floor Plan', url: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80', caption: 'Vastu-certified spatial layout with water feature and elder ground suite' }
     ]
   },
   {
@@ -948,7 +948,7 @@ export const HOUSE_TYPES_DATA: HouseType[] = [
     name: 'Multi-Generational & Rental-Income Residences (G+3 & G+4)',
     tagline: 'Live luxuriously on lower floors while generating ₹60k–₹90k monthly rent above',
     iconName: 'Building2',
-    image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/g-plus-2-multi-family-house.jpg',
     idealPlot: '180 to 300 Sq. Yards',
     builtUpArea: '4,200 to 5,800 sq.ft',
     facing: 'East / West Corner Optimized',
@@ -967,7 +967,7 @@ export const HOUSE_TYPES_DATA: HouseType[] = [
       'Third & Fourth Floor: 2 Independent 2-BHK Units for Corporate IT Tenants (Separate Electricity/Water)'
     ],
     galleryViews: [
-      { label: 'Building Elevation', url: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80', caption: 'G+3 residential elevation with separate private entry for upper tenant units' },
+      { label: 'Building Elevation', url: '/images/g-plus-2-multi-family-house.jpg', caption: 'G+2 independent residential elevation with ground stilt parking & stone cladding' },
       { label: 'Owner Duplex', url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', caption: 'Spacious lower 3-BHK owner duplex with dedicated stilt parking' },
       { label: 'Rental Unit Plan', url: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80', caption: 'Independent upper 2-BHK rental layouts with individual utility sub-meters' }
     ]
@@ -1074,7 +1074,7 @@ export const RECENTS_IN_PROGRESS_DATA: ActiveProjectProgress[] = [
     clientInitials: 'S. R.',
     clientLocation: 'NRI Client (San Jose, USA)',
     estimatedHandover: 'December 2026',
-    siteImage: 'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=800&q=80',
+    siteImage: '/images/civil-construction-in-progress.jpg',
     hasLiveCCTV: true,
     cameraName: 'Cam 01: Slab Rebar Laser Grid'
   },
@@ -1091,9 +1091,9 @@ export const RECENTS_IN_PROGRESS_DATA: ActiveProjectProgress[] = [
     clientInitials: 'R. K. & Ananya',
     clientLocation: 'Financial District, Hyderabad',
     estimatedHandover: 'August 2026',
-    siteImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
+    siteImage: '/images/civil-construction-in-progress.jpg',
     hasLiveCCTV: true,
-    cameraName: 'Cam 02: Balcony Formwork'
+    cameraName: 'Cam 02: Column Shuttering & Formwork'
   },
   {
     id: 'jubilee-hills-rd45',
@@ -1118,16 +1118,16 @@ export const RECENTS_IN_PROGRESS_DATA: ActiveProjectProgress[] = [
     locality: 'Puppalaguda / Manikonda, Hyderabad',
     plotSpec: '200 Sq.Yds • G+2 Duplex (3,200 sq.ft)',
     houseType: 'Net-Zero Eco-Smart Villa',
-    currentStage: 'Terrace Waterproofing & 72-Hr Ponding Inspection',
+    currentStage: 'Industrial Metal Structural Works & Roof Erection',
     dayCount: 'Day 182 of 280',
     progressPercent: 79,
-    recentMilestone: 'Astral CPVC Concealed Plumbing Hydrostatic Pressure Tested at 10 Bar (0 Leakage)',
+    recentMilestone: 'Heavy crane PEB rafter girder erection & ultrasonic weld inspections passed',
     clientInitials: 'K. & Sneha',
     clientLocation: 'Gachibowli Tech Campus',
     estimatedHandover: 'November 2026',
-    siteImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+    siteImage: '/images/metal-structural-peb-erection.jpg',
     hasLiveCCTV: true,
-    cameraName: 'Cam 01: Terrace Ponding View'
+    cameraName: 'Cam 01: Crane Erection View'
   },
   {
     id: 'bachupally-duplex',
@@ -1135,15 +1135,15 @@ export const RECENTS_IN_PROGRESS_DATA: ActiveProjectProgress[] = [
     locality: 'Bachupally, Hyderabad',
     plotSpec: '180 Sq.Yds • G+2 Duplex (2,900 sq.ft)',
     houseType: 'Narrow Plot & Corner Plot Compact Marvel',
-    currentStage: 'Finishes, Marble Laying & 430-Point Snagging Audit',
+    currentStage: 'Finishes, Epoxy Flooring Application & 430-Point Audit',
     dayCount: 'Day 255 of 280',
     progressPercent: 92,
-    recentMilestone: 'Asian Paints Royale Emulsion Dust-Free Application Completed',
+    recentMilestone: 'High-gloss seamless self-leveling floor application & dust-free cure completed',
     clientInitials: 'M. Venkat',
     clientLocation: 'Miyapur, Hyderabad',
     estimatedHandover: 'October 2026',
-    siteImage: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80',
+    siteImage: '/images/industrial-epoxy-flooring.jpg',
     hasLiveCCTV: true,
-    cameraName: 'Cam 02: Interior Finishes'
+    cameraName: 'Cam 02: High-Gloss Floor View'
   }
 ];

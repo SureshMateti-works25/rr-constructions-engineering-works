@@ -58,19 +58,19 @@ export const Hero: React.FC<HeroProps> = ({
   // High-impact big images matching prompt: traditional festive family celebration, big construction home, and structural steel
   const heroImages = {
     family: {
-      url: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1200&q=80',
+      url: '/images/griha-pravesham-family.jpg',
       badge: 'Griha Pravesham Festive Celebration',
-      sub: 'Over 380+ happy traditional Indian families celebrating their housewarming on-time with zero delay.',
+      sub: 'Over 380+ happy traditional Indian families celebrating their housewarming with marigold flower toran, glowing deepams & on-time handover.',
       tag: 'Festive Handover'
     },
     villa: {
-      url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      url: '/images/modern-luxury-duplex-night.jpg',
       badge: 'Big Luxury Duplex Villa Elevation',
       sub: 'Engineered for 150 to 400+ Sq.Yard plots with 100% Vastu compliance, double-height living & terrace garden.',
       tag: 'Turnkey Construction'
     },
     steel: {
-      url: 'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1200&q=80',
+      url: '/images/metal-structural-peb-erection.jpg',
       badge: 'Heavy Metal Structural PEB & Industrial Sheds',
       sub: 'High-tensile steel fabrication, crane erection, and precision industrial construction.',
       tag: 'Structural Engineering'

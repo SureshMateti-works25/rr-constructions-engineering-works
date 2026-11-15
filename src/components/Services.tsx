@@ -30,28 +30,28 @@ export const Services: React.FC<ServicesProps> = ({ onOpenConsultation }) => {
   // Working images for each core service division matching the visiting card Page 2
   const serviceWorkingGalleries: Record<string, { label: string; url: string; caption: string }[]> = {
     'constructions': [
-      { label: 'Residential Villa', url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', caption: 'Custom G+2 Luxury Duplex residential villa execution' },
-      { label: 'Commercial Complex', url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80', caption: 'Multi-storey commercial glass facade & corporate office build' },
-      { label: 'Industrial Construction', url: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80', caption: 'Heavy industrial factory foundation and civil superstructure' },
-      { label: 'Turnkey Handover', url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80', caption: 'Completed turnkey luxury residence ready for Griha Pravesham' }
+      { label: 'Residential Villa', url: '/images/modern-luxury-duplex-night.jpg', caption: 'Custom G+2 Luxury Duplex residential villa execution with ambient night lighting' },
+      { label: 'Griha Pravesham Handover', url: '/images/griha-pravesham-family.jpg', caption: 'Festive housewarming celebration with traditional marigold flower toran & happy family' },
+      { label: 'Civil Site In-Progress', url: '/images/civil-construction-in-progress.jpg', caption: 'Active civil construction site: column shuttering, rebar cages & concrete pour' },
+      { label: 'Commercial Complex', url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80', caption: 'Multi-storey commercial glass facade & corporate office build' }
     ],
     'metal-structural-works': [
+      { label: 'PEB Erection & Crane', url: '/images/metal-structural-peb-erection.jpg', caption: 'Mobile hydraulic crane lifting heavy steel I-beam rafters for industrial warehouse' },
       { label: 'Steel Fabrication', url: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80', caption: 'CNC cutting, plasma bevelling and high-tensile welding' },
-      { label: 'Industrial Sheds', url: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80', caption: 'Pre-Engineered PEB industrial warehouse clear-span shed' },
-      { label: 'Erection & Crane', url: 'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1200&q=80', caption: 'On-site heavy structural steel crane rigging and plumb alignment' },
-      { label: 'Heavy Steel Trusses', url: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80', caption: 'Long-span steel trusses and heavy gantry girder systems' }
+      { label: 'Industrial Sheds', url: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80', caption: 'Pre-Engineered PEB industrial warehouse clear-span shed' },
+      { label: 'Welding & Rigging', url: '/images/metal-structural-peb-erection.jpg', caption: 'On-site heavy structural steel crane rigging and plumb alignment' }
     ],
     'designing-works': [
-      { label: '2D AutoCAD Plan', url: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80', caption: 'Precision architectural working plans & structural GFC drawings' },
+      { label: '2D AutoCAD Plan', url: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80', caption: 'Precision architectural working plans & structural GFC drawings' },
       { label: '3D Elevation Day', url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', caption: 'Photorealistic 3D exterior day render with material texture' },
-      { label: '3D Elevation Night', url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80', caption: 'Exterior night illumination simulation and landscape render' },
-      { label: 'Structural STAAD Analysis', url: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80', caption: 'Finite element bending moment & seismic load analysis' }
+      { label: '3D Elevation Night', url: '/images/modern-luxury-duplex-night.jpg', caption: 'Exterior night illumination simulation and landscape render' },
+      { label: 'Courtyard Design', url: '/images/traditional-andhra-manduva-courtyard.jpg', caption: 'Traditional Andhra Manduva Logili central courtyard CAD modeling' }
     ],
     'flooring-works': [
-      { label: 'High-Gloss Epoxy', url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80', caption: 'Seamless heavy-duty self-leveling epoxy flooring in warehouse' },
-      { label: 'PU Floor Coating', url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80', caption: 'Flexible, chemical and thermal-shock resistant PU flooring' },
-      { label: 'Industrial VDF Slab', url: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80', caption: 'Heavy machinery traffic vacuum dewatered floor slab' },
-      { label: 'Anti-Static ESD', url: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80', caption: 'Electrostatic discharge (ESD) flooring for electronics cleanrooms' }
+      { label: 'Industrial Epoxy Application', url: '/images/industrial-epoxy-flooring.jpg', caption: 'Skilled technicians applying self-leveling mirror-finish glossy epoxy flooring' },
+      { label: 'Polished Italian Marble', url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', caption: 'Mirror-finish bookmatched Italian marble flooring' },
+      { label: 'Anti-Static ESD', url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80', caption: 'Electrostatic discharge (ESD) flooring for electronics cleanrooms' },
+      { label: 'Warehouse High-Gloss', url: '/images/industrial-epoxy-flooring.jpg', caption: 'Durable chemical-resistant high-gloss industrial floor coating' }
     ]
   };
 
