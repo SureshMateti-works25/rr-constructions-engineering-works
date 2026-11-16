@@ -21,7 +21,7 @@ export const COMPANY_INFO = {
   freeMaintenanceYears: 1,
   phone: '+91 79957 53177',
   secondaryPhone: '+91 79957 53177',
-  email: 'Ram@rrconstructions.info',
+  email: 'Ram@rr-engineer.com',
   gstin: '37OZVPS5053M1ZY',
   headOffice: '1-161, Maddipatla, Gudur Mandal, Krishna, Andhra Pradesh - 521150',
   hyderabadHub: 'Pranava Business Square, Gachibowli, Hyderabad & Krishna District AP',
