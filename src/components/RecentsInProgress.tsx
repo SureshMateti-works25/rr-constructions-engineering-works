@@ -5,13 +5,15 @@ import {
   MapPin, 
   FileCheck, 
   ShieldCheck, 
-  ExternalLink, 
   Radio, 
   Building2, 
-  ChevronRight
+  ChevronRight,
+  Download,
+  Eye
 } from 'lucide-react';
 import { RECENTS_IN_PROGRESS_DATA } from '../data/builderData';
 import type { ActiveProjectProgress } from '../types';
+import { QCAuditModal } from './QCAuditModal';
 
 interface RecentsInProgressProps {
   onOpenConsultation: (note?: string) => void;
@@ -20,6 +22,7 @@ interface RecentsInProgressProps {
 export function RecentsInProgress({ onOpenConsultation }: RecentsInProgressProps) {
   const [selectedZone, setSelectedZone] = useState<'all' | 'west' | 'central' | 'north'>('all');
   const [activeCctvProject, setActiveCctvProject] = useState<ActiveProjectProgress | null>(null);
+  const [isQCAuditModalOpen, setIsQCAuditModalOpen] = useState(false);
 
   const filteredProjects = RECENTS_IN_PROGRESS_DATA.filter((project) => {
     if (selectedZone === 'west') {
@@ -286,14 +289,24 @@ export function RecentsInProgress({ onOpenConsultation }: RecentsInProgressProps
               </p>
             </div>
           </div>
-          <button
-            type="button"
-            onClick={() => onOpenConsultation('Sample NABL Quality Inspection Report Request')}
-            className="shrink-0 px-5 py-3 rounded-xl bg-[#071527] hover:bg-[#152a48] text-slate-200 border border-[#1E3A5F] text-xs sm:text-sm font-bold flex items-center gap-2 transition-all"
-          >
-            Download Sample QC Audit (PDF)
-            <ExternalLink className="w-4 h-4 text-cyan-400" />
-          </button>
+          <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+            <a
+              href="/docs/rr-constructions-sample-qc-audit-report.pdf"
+              download="RR_Constructions_Sample_QC_Audit_Report.pdf"
+              className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#00A3FF] to-[#0066CC] hover:from-[#0092e6] hover:to-[#0055b3] text-white text-xs sm:text-sm font-bold flex items-center gap-2 shadow-lg shadow-blue-500/25 transition-all cursor-pointer"
+            >
+              <Download className="w-4 h-4" />
+              <span>Download QC Audit (PDF)</span>
+            </a>
+            <button
+              type="button"
+              onClick={() => setIsQCAuditModalOpen(true)}
+              className="px-4 py-2.5 rounded-xl bg-[#071527] hover:bg-[#152a48] text-slate-200 border border-[#1E3A5F] text-xs sm:text-sm font-bold flex items-center gap-2 transition-all cursor-pointer"
+            >
+              <Eye className="w-4 h-4 text-cyan-400" />
+              <span>View Audit Report</span>
+            </button>
+          </div>
         </div>
 
       </div>
@@ -383,6 +396,12 @@ export function RecentsInProgress({ onOpenConsultation }: RecentsInProgressProps
           </div>
         </div>
       )}
+
+      {/* Sample 430-Point Stage-Gate QC Audit Report & NABL Certificate Modal */}
+      <QCAuditModal 
+        isOpen={isQCAuditModalOpen} 
+        onClose={() => setIsQCAuditModalOpen(false)} 
+      />
 
     </section>
   );
