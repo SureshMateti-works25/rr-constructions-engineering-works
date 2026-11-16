@@ -117,11 +117,11 @@ export function App() {
               onOpenProjectModal={(id) => setActiveModalProjectId(id)}
             />
 
-            {/* Individual Specialized Portals Grid */}
+            {/* Core Services & Capabilities Grid */}
             <HomeDivisionsGrid
               onNavigate={handleNavigate}
               onOpenFlyer={() => setIsFlyerOpen(true)}
-              onOpenConsultation={() => handleOpenConsultation('Inquiry from Home Portals Grid')}
+              onOpenConsultation={() => handleOpenConsultation('Inquiry from Home Services Grid')}
             />
 
             {/* Verified Customer Reviews */}
@@ -250,12 +250,12 @@ export function App() {
           </div>
         )}
 
-        {/* ================= PAGE 5: PROCESS & AURA TECH ================= */}
+        {/* ================= PAGE 5: PROCESS & QUALITY STANDARDS ================= */}
         {currentPage === 'process' && (
           <div>
             <PageHeader
               category="PRECISION EXECUTION &amp; CLIENT TRANSPARENCY"
-              title="6-Stage Precision Execution Workflow &amp; Aura Digital Twin"
+              title="6-Stage Precision Execution Workflow &amp; Live Site Tracking"
               subtitle="From architectural soil lab tests to 24/7 live CCTV app streaming and auspicious Griha Pravesham handover with 430+ certified quality gates."
               currentPage="process"
               onNavigate={handleNavigate}
@@ -264,7 +264,7 @@ export function App() {
             {/* 6-Stage Precision Execution Workflow & Quality Gates */}
             <Process />
 
-            {/* Enterprise Feature: Aura Client Portal & 24/7 CCTV Digital Twin */}
+            {/* Client Feature: 24/7 Live Site CCTV & Remote Tracking */}
             <ClientPortalTeaser />
 
             {/* Customer Testimonials & Reviews */}

@@ -57,12 +57,12 @@ export const HomeDivisionsGrid: React.FC<HomeDivisionsGridProps> = ({
     {
       id: 'process' as PageId,
       badge: 'Engineering Rigor',
-      title: '6-Stage Process & Aura Tech',
-      desc: 'Precision execution from architectural approval and soil lab tests to 24/7 live CCTV digital twin streaming for homeowners.',
+      title: '6-Stage Process & Quality Standards',
+      desc: 'Precision execution from architectural approval and soil lab tests to 24/7 live CCTV streaming for homeowners.',
       icon: Cpu,
       accentColor: 'from-blue-500 to-sky-400',
-      highlights: ['6-Stage Quality Milestones', 'Aura 24/7 Live CCTV Portal', 'Soil & Concrete Lab Testing', 'Turnkey Griha Pravesham Handover'],
-      ctaText: 'View Process & Technology',
+      highlights: ['6-Stage Quality Milestones', '24/7 Live CCTV Site Monitoring', 'NABL Soil & Concrete Lab Tests', 'Turnkey Griha Pravesham Handover'],
+      ctaText: 'View Process & Standards',
     },
     {
       id: 'faq' as PageId,
@@ -84,13 +84,13 @@ export const HomeDivisionsGrid: React.FC<HomeDivisionsGridProps> = ({
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black tracking-wider uppercase bg-[#0066CC]/20 border border-cyan-400/30 text-cyan-300 mb-4">
             <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-            <span>Dedicated Portals &amp; Individual Pages</span>
+            <span>Our Services &amp; Capabilities</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
-            Explore RR Constructions by Specialized Page
+            Comprehensive Engineering &amp; Construction Solutions
           </h2>
           <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Navigate directly to dedicated individual pages to review our engineering divisions, compare turnkey packages, test our live cost estimator, or inspect working architectural CAD designs.
+            From turnkey residential homes and heavy industrial PEB structures to precision 2D/3D CAD elevations and epoxy flooring, explore our complete range of capabilities.
           </p>
         </div>
 

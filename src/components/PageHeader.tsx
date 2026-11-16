@@ -88,10 +88,10 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
           </p>
         </div>
 
-        {/* Quick Multi-Page Switcher Bar */}
+        {/* Quick Navigation Switcher Bar */}
         <div className="mt-8 pt-6 border-t border-[#1E3A5F]/60">
           <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-3">
-            Explore Individual Sections &amp; Portals:
+            Quick Navigation:
           </p>
           <div className="flex flex-wrap items-center gap-2">
             {navTabs.map((tab) => {

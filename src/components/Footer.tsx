@@ -63,10 +63,10 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
           </div>
 
-          {/* Quick Pages Navigation */}
+          {/* Quick Navigation Links */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
-              Specialized Pages
+              Quick Links
             </h4>
             <ul className="space-y-2">
               <li>
