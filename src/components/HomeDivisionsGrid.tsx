@@ -38,7 +38,7 @@ export const HomeDivisionsGrid: React.FC<HomeDivisionsGridProps> = ({
       id: 'packages' as PageId,
       badge: 'Transparent Pricing',
       title: 'Packages & Live Cost Estimator',
-      desc: 'Transparent per-sq.ft packages from ₹1,749 to ₹2,399/sq.ft with real-time plot yard calculator and itemized BOQ breakdowns.',
+      desc: 'Transparent turnkey packages with zero price escalation, real-time plot yard calculator, and itemized BOQ breakdowns.',
       icon: Calculator,
       accentColor: 'from-cyan-500 to-blue-600',
       highlights: ['Standard, Premium & Luxury Tiers', 'Live Plot Yard BOQ Calculator', 'Certified Brand Materials List', 'Escrow Milestone Payments'],

@@ -28,7 +28,7 @@ export const COMPANY_INFO = {
   reraNumber: 'GSTIN: 37OZVPS5053M1ZY • ISO 9001:2015 & Structural Certified',
   isoCertification: 'ISO 9001:2015 & ISO 45001:2018 Certified Engineering Works',
   cctvGuarantee: '24/7 Live Stream on RR Client Portal',
-  startingRate: '₹1,879',
+  startingRate: 'Custom Turnkey Packages',
 };
 
 export const TRUST_PILLARS = [

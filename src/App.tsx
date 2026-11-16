@@ -193,9 +193,9 @@ export function App() {
         {currentPage === 'packages' && (
           <div>
             <PageHeader
-              category="TRANSPARENT PRICING &amp; REAL-TIME ESTIMATOR"
+              category="TRANSPARENT PACKAGES &amp; REAL-TIME ESTIMATOR"
               title="Turnkey Construction Packages &amp; Instant Cost Estimator"
-              subtitle="Itemized turnkey rates starting from ₹1,749/sq.ft with 100% price lock guarantee, escrow stage billing, and a dynamic plot yard calculator for instant budget forecasting."
+              subtitle="Comprehensive turnkey packages with 100% price lock guarantee, transparent milestone billing, and a dynamic plot yard calculator for instant budget forecasting."
               currentPage="packages"
               onNavigate={handleNavigate}
             />

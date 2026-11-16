@@ -148,7 +148,7 @@ export const Hero: React.FC<HeroProps> = ({
 
             <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
               Premier turnkey house construction, heavy steel fabrication, 2D/3D designing, and performance flooring across <strong className="text-white font-bold">Andhra Pradesh &amp; Telangana</strong>. 
-              Turnkey packages starting from <strong className="text-cyan-300 font-bold">₹1,879 / sq.ft</strong> with zero price escalation, 430+ QC checks, and guaranteed on-time Griha Pravesham handover.
+              Turnkey packages with <strong className="text-cyan-300 font-bold">zero price escalation</strong>, 430+ QC checks, and guaranteed on-time Griha Pravesham handover.
             </p>
 
             {/* 4 Core Pillars Direct from Visiting Card */}
@@ -328,9 +328,9 @@ export const Hero: React.FC<HeroProps> = ({
                   <form onSubmit={handleInstantQuote} className="space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-[11px] font-extrabold uppercase tracking-wider text-cyan-300">
-                        Quick Hyderabad &amp; AP Estimator
+                        Quick Telangana &amp; AP Estimator
                       </span>
-                      <span className="text-xs font-black text-amber-400">₹1,879 / sq.ft</span>
+                      <span className="text-xs font-bold text-amber-400">Zero Price Escalation</span>
                     </div>
 
                     <div className="grid grid-cols-2 gap-2">
