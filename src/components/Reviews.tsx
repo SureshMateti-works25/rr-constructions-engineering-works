@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, CheckCircle2, ThumbsUp } from 'lucide-react';
+import { Star, CheckCircle2, ThumbsUp, Briefcase } from 'lucide-react';
 import { TESTIMONIALS_DATA, COMPANY_INFO } from '../data/builderData';
 
 export const Reviews: React.FC = () => {
@@ -62,21 +62,24 @@ export const Reviews: React.FC = () => {
                 </div>
               </div>
 
-              {/* Author Info */}
-              <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
-                <img
-                  src={t.avatar}
-                  alt={t.name}
-                  className="w-11 h-11 rounded-full object-cover border-2 border-orange-400"
-                />
-                <div>
-                  <h4 className="font-sans font-bold text-sm text-slate-900 group-hover:text-[#EA580C] transition-colors">
-                    {t.name}
-                  </h4>
-                  <p className="text-[11px] text-slate-500 font-medium">
+              {/* Client Designation & Verified Tag (No personal names, No personal photos) */}
+              <div className="pt-4 border-t border-slate-100 flex items-start gap-3">
+                <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/80 flex items-center justify-center shrink-0 text-[#EA580C]">
+                  <Briefcase className="w-5 h-5" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h4 className="font-sans font-bold text-sm text-slate-900 group-hover:text-[#EA580C] transition-colors leading-snug">
                     {t.role}
-                  </p>
-                  <p className="text-[10px] text-[#EA580C] font-semibold">
+                  </h4>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="text-[11px] text-slate-500 font-medium">{t.location}</span>
+                    <span className="text-slate-300">•</span>
+                    <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600">
+                      <CheckCircle2 className="w-3 h-3 text-emerald-500" />
+                      Verified Client
+                    </span>
+                  </div>
+                  <p className="text-[10px] text-[#EA580C] font-semibold mt-0.5">
                     {t.projectTitle}
                   </p>
                 </div>

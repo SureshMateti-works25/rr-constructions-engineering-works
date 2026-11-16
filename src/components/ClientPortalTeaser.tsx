@@ -70,7 +70,7 @@ export const ClientPortalTeaser: React.FC = () => {
                   </span>
                 </div>
                 <p className="text-xs text-slate-400">
-                  Client: Srinivas Rao (NRI, California) • Site Engineer: Er. P. K. Varma
+                  Client: Verified Homeowner (NRI, California) • Site Supervising Engineer: Project Operations Head
                 </p>
               </div>
             </div>

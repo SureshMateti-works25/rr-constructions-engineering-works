@@ -87,10 +87,10 @@ export const HomeDivisionsGrid: React.FC<HomeDivisionsGridProps> = ({
             <span>Our Services &amp; Capabilities</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
-            Comprehensive Engineering &amp; Construction Solutions
+            Explore RR Constructions by Service &amp; Expertise
           </h2>
           <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
-            From turnkey residential homes and heavy industrial PEB structures to precision 2D/3D CAD elevations and epoxy flooring, explore our complete range of capabilities.
+            Review our engineering divisions, compare turnkey packages, test our live cost estimator, or inspect working architectural CAD designs.
           </p>
         </div>
 

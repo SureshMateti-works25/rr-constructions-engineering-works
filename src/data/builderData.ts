@@ -194,7 +194,7 @@ export const PROJECTS_DATA: Project[] = [
       'Schneider Electric Modular Switches'
     ],
     clientQuote: {
-      author: 'Srinivas & Madhavi Rao',
+      author: 'Tech Director & Homeowner',
       locality: 'Tellapur, Hyderabad',
       text: 'Being in the US, monitoring our home construction in Hyderabad was our biggest fear. RR Constructions eliminated all stress with their live CCTV app and weekly drone logs. Delivered 2 weeks ahead of time without 1 rupee of extra cost!',
       rating: 5
@@ -232,7 +232,7 @@ export const PROJECTS_DATA: Project[] = [
       'Schüco Slimline Aluminium Windows'
     ],
     clientQuote: {
-      author: 'Dr. V. Prasad & Archana',
+      author: 'Senior Consultant Surgeon',
       locality: 'Jubilee Hills, Hyderabad',
       text: 'Their civil engineers are exceptionally disciplined. The 430-point quality checklist gave us complete confidence, especially the 28-day concrete cube crush test reports from the NABL lab.',
       rating: 5
@@ -269,7 +269,7 @@ export const PROJECTS_DATA: Project[] = [
       'Asian Paints Royale Luxury Interior'
     ],
     clientQuote: {
-      author: 'Karthik & Sneha Reddy',
+      author: 'Senior VP & Enterprise Architect',
       locality: 'Gachibowli, Hyderabad',
       text: 'The best decision was choosing RR Constructions’s Premium package. Clear fixed-price BOQ, zero escalation, and complete transparency on material delivery slips.',
       rating: 5
@@ -337,7 +337,7 @@ export const PROJECTS_DATA: Project[] = [
       'Hindware Italian Collection'
     ],
     clientQuote: {
-      author: 'M. Venkat & Lakshmi',
+      author: 'Independent House Owner',
       locality: 'Manikonda, Hyderabad',
       text: 'RR Constructions helped us get GHMC building approval smoothly. The construction was completed cleanly and handed over exactly on the promised date.',
       rating: 5
@@ -757,37 +757,37 @@ export const PROCESS_STAGES: ProcessStage[] = [
 export const TESTIMONIALS_DATA: Testimonial[] = [
   {
     id: 'test-1',
-    name: 'Srinivas & Madhavi Rao',
-    role: 'Tech Director (Google) & Financial Analyst',
+    name: 'Tech Director (Google) & Financial Analyst',
+    role: 'Tech Director & Financial Analyst',
     location: 'Tellapur, Hyderabad',
     projectTitle: 'The Tellapur Duplex Villa (3,850 sq.ft on 240 Sq.Yds)',
     rating: 5,
     date: 'December 2025',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
+    avatar: '',
     feedback: 'Living in the US while constructing our dream home in Tellapur seemed like an impossible challenge. RR Constructions made it completely seamless. Their mobile app gave us live CCTV camera feeds, daily milestone photos, and itemized material delivery receipts. Delivered 14 days ahead of schedule with zero price escalation!',
     metrics: 'Delivered 14 days early • Zero price escalation'
   },
   {
     id: 'test-2',
-    name: 'Dr. V. Prasad & Archana',
+    name: 'Senior Consultant Surgeon, AIG Hospitals',
     role: 'Senior Consultant Surgeon, AIG Hospitals',
     location: 'Jubilee Hills, Hyderabad',
     projectTitle: 'Jubilee Hills Signature Residence (6,200 sq.ft on 380 Sq.Yds)',
     rating: 5,
     date: 'January 2026',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+    avatar: '',
     feedback: 'Their structural engineering discipline is exceptional. The soil in Jubilee Hills had rocky contours, but their foundation execution with Tata Tiscon 550D rebar and M25 ready mix was top tier. The 430-point quality checklist gave us complete confidence.',
     metrics: '430+ QC Passed • NABL Lab Certified'
   },
   {
     id: 'test-3',
-    name: 'Karthik & Sneha Reddy',
+    name: 'Senior VP, FinTech & Enterprise Architect',
     role: 'Senior VP, FinTech & Enterprise Architect',
     location: 'Gachibowli, Hyderabad',
     projectTitle: 'Gachibowli Executive Duplex (2,950 sq.ft on 180 Sq.Yds)',
     rating: 5,
     date: 'November 2025',
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
+    avatar: '',
     feedback: 'RR Constructions provides the transparency the Hyderabad construction industry desperately needed. Every milestone payment is linked to verified work on the app. The finishes, Kohler fittings, and tile alignment are hotel-grade.',
     metrics: 'Sub-millimeter tile joints • 10-Yr Warranty'
   }
@@ -1088,7 +1088,7 @@ export const RECENTS_IN_PROGRESS_DATA: ActiveProjectProgress[] = [
     dayCount: 'Day 115 of 300',
     progressPercent: 52,
     recentMilestone: 'Tata Tiscon 550D Column Jacketing & Ultrasonic Beam Check Completed',
-    clientInitials: 'R. K. & Ananya',
+    clientInitials: 'R. K.',
     clientLocation: 'Financial District, Hyderabad',
     estimatedHandover: 'August 2026',
     siteImage: '/images/civil-construction-in-progress.jpg',
@@ -1122,7 +1122,7 @@ export const RECENTS_IN_PROGRESS_DATA: ActiveProjectProgress[] = [
     dayCount: 'Day 182 of 280',
     progressPercent: 79,
     recentMilestone: 'Heavy crane PEB rafter girder erection & ultrasonic weld inspections passed',
-    clientInitials: 'K. & Sneha',
+    clientInitials: 'K. R.',
     clientLocation: 'Gachibowli Tech Campus',
     estimatedHandover: 'November 2026',
     siteImage: '/images/metal-structural-peb-erection.jpg',
@@ -1139,7 +1139,7 @@ export const RECENTS_IN_PROGRESS_DATA: ActiveProjectProgress[] = [
     dayCount: 'Day 255 of 280',
     progressPercent: 92,
     recentMilestone: 'High-gloss seamless self-leveling floor application & dust-free cure completed',
-    clientInitials: 'M. Venkat',
+    clientInitials: 'M. V.',
     clientLocation: 'Miyapur, Hyderabad',
     estimatedHandover: 'October 2026',
     siteImage: '/images/industrial-epoxy-flooring.jpg',

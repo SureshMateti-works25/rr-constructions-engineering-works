@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Eye, MapPin, Clock, CheckCircle, Sparkles, X, Layers, Image as ImageIcon, Star } from 'lucide-react';
+import { Eye, MapPin, Clock, CheckCircle, CheckCircle2, Sparkles, X, Layers, Image as ImageIcon, Star } from 'lucide-react';
 import { PROJECTS_DATA } from '../data/builderData';
 import type { ProjectCategory } from '../types';
 
@@ -335,8 +335,9 @@ export const Projects: React.FC<ProjectsProps> = ({
                     <p className="text-xs italic text-slate-700">
                       &ldquo;{activeProject.clientQuote.text}&rdquo;
                     </p>
-                    <span className="text-xs font-bold text-slate-900 block">
-                      — {activeProject.clientQuote.author}
+                    <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5 mt-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 inline shrink-0" />
+                      <span>{activeProject.clientQuote.author}</span>
                     </span>
                   </div>
                 )}
