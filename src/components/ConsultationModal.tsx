@@ -167,6 +167,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                 >
                   <option value="Krishna / Gudur / Maddipatla">Krishna District (Gudur / Maddipatla / Machilipatnam)</option>
                   <option value="Vijayawada / Guntur">Vijayawada &amp; Guntur Capital Region</option>
+                  <option value="Medchal / Shamirpeta / Aliabad">Medchal / Shamirpeta / Aliabad (Telangana Hub)</option>
                   <option value="Hyderabad - West Zone">Hyderabad (Tellapur, Kokapet, Gachibowli, Financial Dist)</option>
                   <option value="Hyderabad - Central">Hyderabad (Jubilee Hills, Banjara Hills)</option>
                   <option value="Hyderabad - North">Hyderabad (Kompally, Bachupally, Miyapur)</option>

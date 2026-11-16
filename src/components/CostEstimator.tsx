@@ -411,6 +411,7 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
                       >
                         <option value="Krishna / Gudur / Maddipatla">Krishna District (Gudur / Maddipatla / Machilipatnam)</option>
                         <option value="Vijayawada / Guntur">Vijayawada &amp; Guntur Capital Region</option>
+                        <option value="Medchal / Shamirpeta / Aliabad">Medchal / Shamirpeta / Aliabad (Telangana Hub)</option>
                         <option value="Tellapur / Financial District">Tellapur / Financial District (Hyderabad)</option>
                         <option value="Jubilee Hills / Banjara Hills">Jubilee Hills / Banjara Hills (Hyderabad)</option>
                         <option value="Kokapet / Gandipet">Kokapet / Gandipet (Hyderabad)</option>

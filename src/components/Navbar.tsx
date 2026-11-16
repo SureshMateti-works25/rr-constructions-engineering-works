@@ -202,7 +202,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </div>
                 <div className="text-[11px] text-slate-300 font-mono mt-1">GSTIN: {COMPANY_INFO.gstin}</div>
                 <div className="text-[10px] text-slate-400 mt-1">
-                  Maddipatla, Krishna District, AP • Hyderabad Hub
+                  Maddipatla, Krishna Dist, AP • Shamirpeta, Medchal Dist, Telangana
                 </div>
               </div>
 

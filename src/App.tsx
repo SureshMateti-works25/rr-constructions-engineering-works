@@ -319,7 +319,7 @@ export function App() {
                       <div className="p-4 rounded-xl bg-[#071527] border border-[#1E3A5F] flex items-start gap-3">
                         <MapPin className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
                         <div>
-                          <h4 className="text-sm font-bold text-white">Telangana Regional Hub (Hyderabad)</h4>
+                          <h4 className="text-sm font-bold text-white">Telangana Regional Hub (Medchal-Malkajgiri)</h4>
                           <p className="text-xs text-slate-300 mt-1">{COMPANY_INFO.hyderabadHub}</p>
                         </div>
                       </div>

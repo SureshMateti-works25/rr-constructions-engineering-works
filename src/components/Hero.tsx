@@ -242,9 +242,9 @@ export const Hero: React.FC<HeroProps> = ({
                 <MapPin className="w-3.5 h-3.5 text-cyan-400" />
                 Offices:
               </span>
-              <span>1-161, Maddipatla, Gudur Mandal, Krishna, AP - 521150</span>
+              <span><strong>Head Office:</strong> {COMPANY_INFO.headOffice}</span>
               <span className="text-slate-600">|</span>
-              <span className="text-cyan-300">Telangana Regional Hub: Gachibowli, Hyderabad</span>
+              <span className="text-cyan-300"><strong>Telangana Hub:</strong> {COMPANY_INFO.hyderabadHub}</span>
             </div>
 
           </div>

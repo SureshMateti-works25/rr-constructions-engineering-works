@@ -24,7 +24,7 @@ export const COMPANY_INFO = {
   email: 'Ram@rr-engineer.com',
   gstin: '37OZVPS5053M1ZY',
   headOffice: '1-161, Maddipatla, Gudur Mandal, Krishna, Andhra Pradesh - 521150',
-  hyderabadHub: 'Pranava Business Square, Gachibowli, Hyderabad & Krishna District AP',
+  hyderabadHub: 'Aliabad, Shamirpeta Mandal, Medchal-Malkajgiri Dist, Telangana - 500078, India',
   reraNumber: 'GSTIN: 37OZVPS5053M1ZY • ISO 9001:2015 & Structural Certified',
   isoCertification: 'ISO 9001:2015 & ISO 45001:2018 Certified Engineering Works',
   cctvGuarantee: '24/7 Live Stream on RR Client Portal',
