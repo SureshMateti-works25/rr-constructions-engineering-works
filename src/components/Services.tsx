@@ -92,7 +92,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenConsultation }) => {
   };
 
   return (
-    <section id="services" className="py-20 md:py-28 bg-slate-50 text-slate-900 relative overflow-hidden border-t border-slate-200">
+    <section id="services" className="pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24 bg-slate-50 text-slate-900 relative overflow-hidden">
       
       {/* Background Blueprint Grid */}
       <div 

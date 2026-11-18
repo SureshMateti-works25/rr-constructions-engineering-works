@@ -14,7 +14,7 @@ export const Packages: React.FC<PackagesProps> = ({
   const [showComparisonTable, setShowComparisonTable] = useState(false);
 
   return (
-    <section id="packages" className="py-20 bg-slate-50 relative">
+    <section id="packages" className="pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24 bg-slate-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

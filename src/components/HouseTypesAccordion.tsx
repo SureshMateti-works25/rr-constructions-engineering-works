@@ -69,7 +69,7 @@ export function HouseTypesAccordion({ onOpenConsultation, onScrollToEstimator }:
   });
 
   return (
-    <section id="house-types" className="py-20 md:py-28 bg-slate-50 text-slate-900 relative overflow-hidden border-t border-slate-200">
+    <section id="house-types" className="pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24 bg-slate-50 text-slate-900 relative overflow-hidden">
       {/* Background Ambient Glows */}
       <div className="absolute top-1/4 -left-40 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 -right-40 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />

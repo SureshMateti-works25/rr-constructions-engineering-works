@@ -8,7 +8,7 @@ export const Process: React.FC = () => {
   const currentStage = PROCESS_STAGES.find((s) => s.step === activeStep) || PROCESS_STAGES[0];
 
   return (
-    <section id="process" className="py-20 bg-white relative">
+    <section id="process" className="pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

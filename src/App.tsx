@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { HomeDivisionsGrid } from './components/HomeDivisionsGrid';
-import { PageHeader } from './components/PageHeader';
 import type { PageId } from './components/PageHeader';
 import { Services } from './components/Services';
 import { HouseTypesAccordion } from './components/HouseTypesAccordion';
@@ -173,14 +172,6 @@ export function App() {
         {/* ================= PAGE 2: SERVICES & DIVISIONS ================= */}
         {currentPage === 'services' && (
           <div>
-            <PageHeader
-              category="CORE DIVISIONS &amp; ENGINEERING SERVICES"
-              title="Construction, Metal Structural, Designing &amp; Flooring Works"
-              subtitle="End-to-end engineering excellence from civil turnkey execution and PEB industrial sheds to 2D/3D AutoCAD models and high-performance epoxy flooring across AP &amp; Telangana."
-              currentPage="services"
-              onNavigate={handleNavigate}
-            />
-
             {/* The 4 Core Service Divisions with Interactive Working Image Galleries */}
             <Services onOpenConsultation={handleOpenConsultation} />
 
@@ -192,14 +183,6 @@ export function App() {
         {/* ================= PAGE 3: PACKAGES & COST ESTIMATOR ================= */}
         {currentPage === 'packages' && (
           <div>
-            <PageHeader
-              category="TRANSPARENT PACKAGES &amp; REAL-TIME ESTIMATOR"
-              title="Turnkey Construction Packages &amp; Instant Cost Estimator"
-              subtitle="Comprehensive turnkey packages with 100% price lock guarantee, transparent milestone billing, and a dynamic plot yard calculator for instant budget forecasting."
-              currentPage="packages"
-              onNavigate={handleNavigate}
-            />
-
             {/* Turnkey Construction Packages & Pricing Matrix */}
             <Packages
               onSelectPackageForEstimator={handleSelectPackageForEstimator}
@@ -221,14 +204,6 @@ export function App() {
         {/* ================= PAGE 4: PROJECTS & HOUSE TYPOLOGIES ================= */}
         {currentPage === 'projects' && (
           <div>
-            <PageHeader
-              category="PORTFOLIO &amp; ARCHITECTURAL ELEVATIONS"
-              title="House Typologies, CAD Plans &amp; Live Site Progress"
-              subtitle="Explore multi-view working image drawers (Day Elevation, Night Facade, 3D CAD Floor Plan, Living Pavilion) alongside live real-time construction milestone updates."
-              currentPage="projects"
-              onNavigate={handleNavigate}
-            />
-
             {/* Unique House Types Constructed - Interactive Accordion with 4-view switchers */}
             <HouseTypesAccordion
               onOpenConsultation={handleOpenConsultation}
@@ -253,14 +228,6 @@ export function App() {
         {/* ================= PAGE 5: PROCESS & QUALITY STANDARDS ================= */}
         {currentPage === 'process' && (
           <div>
-            <PageHeader
-              category="PRECISION EXECUTION &amp; CLIENT TRANSPARENCY"
-              title="6-Stage Precision Execution Workflow &amp; Live Site Tracking"
-              subtitle="From architectural soil lab tests to 24/7 live CCTV app streaming and auspicious Griha Pravesham handover with 430+ certified quality gates."
-              currentPage="process"
-              onNavigate={handleNavigate}
-            />
-
             {/* 6-Stage Precision Execution Workflow & Quality Gates */}
             <Process />
 
@@ -275,14 +242,6 @@ export function App() {
         {/* ================= PAGE 6: FAQ & CONTACT DESK ================= */}
         {currentPage === 'faq' && (
           <div>
-            <PageHeader
-              category="CLIENT ADVISORY &amp; OFFICIAL CONTACT"
-              title="Frequently Asked Questions &amp; Office Consultation Desk"
-              subtitle="Clear, transparent answers regarding DTCP/HMDA building permits, 100% Vastu Shastra compliance, bank loans, and structural warranties."
-              currentPage="faq"
-              onNavigate={handleNavigate}
-            />
-
             {/* Builder FAQ Accordion */}
             <FaqSection />
 
