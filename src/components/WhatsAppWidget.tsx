@@ -24,18 +24,18 @@ export const WhatsAppWidget: React.FC<WhatsAppWidgetProps> = ({
   return (
     <div id="whatsapp-float" className="fixed bottom-6 right-6 z-40 no-print">
       {isOpen && (
-        <div className="mb-3 w-80 sm:w-96 rounded-2xl bg-[#071527] border border-[#1E3A5F] shadow-2xl p-5 text-white space-y-4 animate-in fade-in slide-in-from-bottom-5 duration-200">
-          <div className="flex items-center justify-between border-b border-[#1E3A5F] pb-3">
+        <div className="mb-3 w-80 sm:w-96 rounded-2xl bg-white border border-slate-200 shadow-2xl p-5 text-slate-900 space-y-4 animate-in fade-in slide-in-from-bottom-5 duration-200">
+          <div className="flex items-center justify-between border-b border-slate-100 pb-3">
             <div className="flex items-center gap-2.5">
               <div className="w-9 h-9 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold shadow-md">
                 <MessageSquare className="w-5 h-5 fill-current" />
               </div>
               <div>
-                <h4 className="font-sans font-bold text-sm text-white">
+                <h4 className="font-sans font-bold text-sm text-[#0B2545]">
                   {COMPANY_INFO.shortName} Concierge
                 </h4>
-                <span className="text-[10px] text-cyan-400 flex items-center gap-1 font-medium">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-[10px] text-emerald-600 flex items-center gap-1 font-medium">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                   Proprietor {COMPANY_INFO.proprietor} Online Now
                 </span>
               </div>
@@ -44,14 +44,14 @@ export const WhatsAppWidget: React.FC<WhatsAppWidgetProps> = ({
             <button
               type="button"
               onClick={() => setIsOpen(false)}
-              className="text-slate-400 hover:text-white p-1"
+              className="text-slate-400 hover:text-slate-700 p-1 cursor-pointer"
             >
               <X className="w-4 h-4" />
             </button>
           </div>
 
-          <p className="text-xs text-slate-300 leading-relaxed">
-            Welcome to <strong className="text-white">{COMPANY_INFO.name}</strong>. Planning a residential construction, metal structural shed, 2D/3D design, or industrial epoxy flooring?
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Welcome to <strong className="text-slate-900">{COMPANY_INFO.name}</strong>. Planning a residential construction, metal structural shed, 2D/3D design, or industrial epoxy flooring?
           </p>
 
           <div className="space-y-2">
@@ -61,9 +61,9 @@ export const WhatsAppWidget: React.FC<WhatsAppWidgetProps> = ({
                 setIsOpen(false);
                 onScrollToEstimator();
               }}
-              className="w-full text-left p-2.5 rounded-xl bg-[#0F1E36] hover:bg-[#1E3A5F] border border-[#1E3A5F] transition-colors flex items-center gap-2.5 text-xs text-slate-200 cursor-pointer"
+              className="w-full text-left p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 transition-colors flex items-center gap-2.5 text-xs text-slate-800 cursor-pointer"
             >
-              <Calculator className="w-4 h-4 text-cyan-400 shrink-0" />
+              <Calculator className="w-4 h-4 text-orange-600 shrink-0" />
               <span>Calculate Turnkey Construction Cost</span>
             </button>
 
@@ -73,9 +73,9 @@ export const WhatsAppWidget: React.FC<WhatsAppWidgetProps> = ({
                 setIsOpen(false);
                 onOpenConsultation();
               }}
-              className="w-full text-left p-2.5 rounded-xl bg-[#0F1E36] hover:bg-[#1E3A5F] border border-[#1E3A5F] transition-colors flex items-center gap-2.5 text-xs text-slate-200 cursor-pointer"
+              className="w-full text-left p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 transition-colors flex items-center gap-2.5 text-xs text-slate-800 cursor-pointer"
             >
-              <Calendar className="w-4 h-4 text-cyan-400 shrink-0" />
+              <Calendar className="w-4 h-4 text-orange-600 shrink-0" />
               <span>Book Free On-Site Plot Survey</span>
             </button>
 
@@ -85,9 +85,9 @@ export const WhatsAppWidget: React.FC<WhatsAppWidgetProps> = ({
                 setIsOpen(false);
                 onOpenFlyer();
               }}
-              className="w-full text-left p-2.5 rounded-xl bg-[#0F1E36] hover:bg-[#1E3A5F] border border-[#1E3A5F] transition-colors flex items-center gap-2.5 text-xs text-slate-200 cursor-pointer"
+              className="w-full text-left p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 transition-colors flex items-center gap-2.5 text-xs text-slate-800 cursor-pointer"
             >
-              <Sparkles className="w-4 h-4 text-cyan-400 shrink-0" />
+              <Sparkles className="w-4 h-4 text-orange-600 shrink-0" />
               <span>View &amp; Print Official Flyer</span>
             </button>
 

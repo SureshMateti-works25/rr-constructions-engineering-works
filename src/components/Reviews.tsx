@@ -12,7 +12,7 @@ export const Reviews: React.FC = () => {
           <span className="text-xs font-bold uppercase tracking-widest text-[#EA580C] bg-orange-50 px-3.5 py-1 rounded-full border border-orange-200">
             Client Voices &amp; Experiences
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2545] tracking-tight">
             Trusted by Doctors, IT Executives &amp; NRI Families
           </h2>
           

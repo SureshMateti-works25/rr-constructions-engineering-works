@@ -32,18 +32,18 @@ export const ClientPortalTeaser: React.FC = () => {
   const currentCam = cameras[activeCamera];
 
   return (
-    <section id="portal" className="py-20 bg-slate-900 text-white relative">
+    <section id="portal" className="py-20 bg-slate-50 text-slate-900 relative border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-cyan-400 bg-blue-900/40 px-3.5 py-1 rounded-full border border-blue-500/30">
+          <span className="text-xs font-bold uppercase tracking-widest text-orange-700 bg-orange-50 px-3.5 py-1 rounded-full border border-orange-200 shadow-xs">
             Tech-Enabled Construction
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2545] tracking-tight">
             RR Client Portal &amp; 24/7 Live Site CCTV
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base">
+          <p className="text-slate-600 text-sm sm:text-base">
             Never wonder what is happening on your plot in Hyderabad. Whether you are at work in Hitec City 
             or across the world in the US, watch live PTZ camera feeds, inspect daily material delivery receipts, 
             and track every milestone dollar.
@@ -51,12 +51,12 @@ export const ClientPortalTeaser: React.FC = () => {
         </div>
 
         {/* Portal Interactive Mockup */}
-        <div className="rounded-2xl bg-gradient-to-b from-slate-950 to-slate-900 border border-slate-800 shadow-2xl p-6 sm:p-8">
+        <div className="rounded-2xl bg-gradient-to-b from-[#0B2545] via-[#0F1E36] to-[#0B2545] border border-slate-700 shadow-2xl p-6 sm:p-8 text-white">
           
           {/* Top Bar of the Mockup */}
-          <div className="flex flex-wrap items-center justify-between pb-6 border-b border-slate-800 gap-4">
+          <div className="flex flex-wrap items-center justify-between pb-6 border-b border-slate-700/80 gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00A3FF] to-[#0066CC] flex items-center justify-center text-white font-bold text-lg shadow-md">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-white font-bold text-lg shadow-md">
                 <Smartphone className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -69,7 +69,7 @@ export const ClientPortalTeaser: React.FC = () => {
                     LIVE STREAMING
                   </span>
                 </div>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-slate-300">
                   Client: Verified Homeowner (NRI, California) • Site Supervising Engineer: Project Operations Head
                 </p>
               </div>
@@ -77,12 +77,12 @@ export const ClientPortalTeaser: React.FC = () => {
 
             {/* Quick Live Stats Pill */}
             <div className="flex items-center gap-4 text-xs">
-              <div className="flex items-center gap-1.5 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800">
-                <Users className="w-3.5 h-3.5 text-cyan-400" />
+              <div className="flex items-center gap-1.5 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-700">
+                <Users className="w-3.5 h-3.5 text-orange-400" />
                 <span className="text-slate-300">22 Masons On-Site</span>
               </div>
-              <div className="flex items-center gap-1.5 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800">
-                <CloudSun className="w-3.5 h-3.5 text-cyan-400" />
+              <div className="flex items-center gap-1.5 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-700">
+                <CloudSun className="w-3.5 h-3.5 text-orange-400" />
                 <span className="text-slate-300">28°C Optimal Curing</span>
               </div>
             </div>
@@ -146,8 +146,8 @@ export const ClientPortalTeaser: React.FC = () => {
                     onClick={() => setActiveCamera(cam.id as any)}
                     className={`py-2 px-3 rounded-lg text-xs font-bold border transition-all cursor-pointer ${
                       activeCamera === cam.id
-                        ? 'bg-blue-600/30 border-[#0066CC] text-cyan-300'
-                        : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white'
+                        ? 'bg-orange-500 text-white border-orange-400 shadow-sm'
+                        : 'bg-slate-900 border-slate-700 text-slate-300 hover:text-white'
                     }`}
                   >
                     {cam.label}
@@ -160,19 +160,19 @@ export const ClientPortalTeaser: React.FC = () => {
             <div className="lg:col-span-4 space-y-6">
               
               {/* Milestone Progress Card */}
-              <div className="p-5 rounded-xl bg-slate-900/90 border border-slate-800 space-y-4">
+              <div className="p-5 rounded-xl bg-[#071527]/90 border border-slate-700 space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-300">
                     Milestone Progress
                   </span>
-                  <span className="text-xs font-black text-cyan-400 font-mono">
+                  <span className="text-xs font-black text-orange-400 font-mono">
                     68% Completed
                   </span>
                 </div>
 
                 <div className="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
                   <div
-                    className="bg-gradient-to-r from-[#00A3FF] to-[#0066CC] h-full rounded-full transition-all duration-1000"
+                    className="bg-gradient-to-r from-orange-500 via-amber-500 to-emerald-400 h-full rounded-full transition-all duration-1000"
                     style={{ width: '68%' }}
                   ></div>
                 </div>
@@ -194,12 +194,12 @@ export const ClientPortalTeaser: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between text-white font-semibold">
                     <span className="flex items-center gap-1.5">
-                      <span className="w-3.5 h-3.5 rounded-full border-2 border-[#0066CC] flex items-center justify-center">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#0066CC]"></span>
+                      <span className="w-3.5 h-3.5 rounded-full border-2 border-orange-500 flex items-center justify-center">
+                        <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
                       </span>
                       <span>Second Floor &amp; Masonry</span>
                     </span>
-                    <span className="text-cyan-400 font-bold">In Progress</span>
+                    <span className="text-orange-400 font-bold">In Progress</span>
                   </div>
                   <div className="flex items-center justify-between text-slate-500">
                     <span className="flex items-center gap-1.5">
@@ -212,7 +212,7 @@ export const ClientPortalTeaser: React.FC = () => {
               </div>
 
               {/* Digital Blueprint & Certificate Vault */}
-              <div className="p-5 rounded-xl bg-slate-900/90 border border-slate-800 space-y-3">
+              <div className="p-5 rounded-xl bg-[#071527]/90 border border-slate-700 space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-300">
                     Digital Document Vault
@@ -232,7 +232,7 @@ export const ClientPortalTeaser: React.FC = () => {
                       className="flex items-center justify-between p-2.5 rounded-lg bg-slate-950/60 border border-slate-800 text-xs"
                     >
                       <div className="flex items-center gap-2 text-slate-300">
-                        <FileText className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                        <FileText className="w-3.5 h-3.5 text-orange-400 shrink-0" />
                         <span className="line-clamp-1">{doc.title}</span>
                       </div>
                       <span className="text-[10px] text-slate-500 font-mono shrink-0 ml-2">

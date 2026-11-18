@@ -137,10 +137,10 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0066CC] bg-blue-50 px-3.5 py-1 rounded-full border border-blue-200">
+          <span className="text-xs font-bold uppercase tracking-widest text-orange-700 bg-orange-50 px-3.5 py-1 rounded-full border border-orange-200 shadow-xs">
             Tech-Enabled Cost Calculator
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2545] tracking-tight">
             Estimate Your Construction Cost — AP &amp; Telangana
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
@@ -166,7 +166,7 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
                     onClick={() => setMeasurementMode('yards')}
                     className={`px-3 py-1 rounded-md transition-all cursor-pointer ${
                       measurementMode === 'yards'
-                        ? 'bg-[#0066CC] text-white shadow-xs'
+                        ? 'bg-[#0B2545] text-white shadow-xs'
                         : 'text-slate-700 hover:text-slate-900'
                     }`}
                   >
@@ -177,7 +177,7 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
                     onClick={() => setMeasurementMode('sqft')}
                     className={`px-3 py-1 rounded-md transition-all cursor-pointer ${
                       measurementMode === 'sqft'
-                        ? 'bg-[#0066CC] text-white shadow-xs'
+                        ? 'bg-[#0B2545] text-white shadow-xs'
                         : 'text-slate-700 hover:text-slate-900'
                     }`}
                   >
@@ -196,7 +196,7 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
                         onClick={() => setPlotYards(yards)}
                         className={`py-2 px-1 text-center rounded-lg border text-xs font-bold transition-all cursor-pointer ${
                           plotYards === yards
-                            ? 'bg-[#0066CC] text-white border-[#0066CC] shadow-sm'
+                            ? 'bg-gradient-to-r from-orange-500 to-amber-600 text-white border-orange-500 shadow-sm'
                             : 'bg-white text-slate-700 border-slate-300 hover:border-slate-400'
                         }`}
                       >
@@ -246,12 +246,12 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
                     onClick={() => setFloors(item.value)}
                     className={`py-2.5 px-2 rounded-xl text-center border transition-all cursor-pointer ${
                       floors === item.value
-                        ? 'bg-[#0066CC] text-white border-[#0066CC] shadow-sm'
+                        ? 'bg-[#0B2545] text-white border-[#0B2545] shadow-sm'
                         : 'bg-white text-slate-700 border-slate-300 hover:border-slate-400'
                     }`}
                   >
                     <span className="block text-xs font-extrabold">{item.label}</span>
-                    <span className={`text-[10px] block mt-0.5 ${floors === item.value ? 'text-blue-100' : 'text-slate-500'}`}>
+                    <span className={`text-[10px] block mt-0.5 ${floors === item.value ? 'text-amber-300' : 'text-slate-500'}`}>
                       {item.sub}
                     </span>
                   </button>
@@ -272,15 +272,15 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
                     onClick={() => onPackageChange(pkg.id)}
                     className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${
                       currentPackage.id === pkg.id
-                        ? 'bg-blue-50/80 border-[#0066CC] ring-2 ring-blue-500/20 shadow-xs'
+                        ? 'bg-orange-50/90 border-orange-500 ring-2 ring-orange-500/20 shadow-xs'
                         : 'bg-white border-slate-200 hover:border-slate-300'
                     }`}
                   >
                     <div>
-                      <span className="text-[10px] font-extrabold uppercase text-[#0066CC] block">
+                      <span className="text-[10px] font-extrabold uppercase text-orange-600 block">
                         {pkg.name.split(' ')[0]}
                       </span>
-                      <span className="text-sm font-black text-slate-900 block mt-0.5">
+                      <span className="text-sm font-black text-[#0B2545] block mt-0.5">
                         ₹{pkg.ratePerSqFt}
                       </span>
                     </div>
@@ -304,14 +304,14 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
                       onClick={() => toggleAddOn(addon.id)}
                       className={`p-3 rounded-xl border transition-all cursor-pointer flex items-start gap-2.5 ${
                         isChecked
-                          ? 'bg-blue-50/60 border-[#0066CC]'
+                          ? 'bg-orange-50/60 border-orange-500'
                           : 'bg-white border-slate-200 hover:border-slate-300'
                       }`}
                     >
                       <div
                         className={`w-4 h-4 rounded mt-0.5 flex items-center justify-center shrink-0 border transition-colors ${
                           isChecked
-                            ? 'bg-[#0066CC] border-[#0066CC] text-white'
+                            ? 'bg-orange-600 border-orange-600 text-white'
                             : 'border-slate-400 bg-white'
                         }`}
                       >
@@ -321,7 +321,7 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
                         <span className="text-xs font-bold text-slate-900 block">
                           {addon.name}
                         </span>
-                        <span className="text-[11px] font-extrabold text-[#0066CC] block">
+                        <span className="text-[11px] font-extrabold text-orange-600 block">
                           +{formatINR(addon.cost)}
                         </span>
                         <p className="text-[10px] text-slate-500 leading-tight">
@@ -394,7 +394,7 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
                         placeholder="Your Full Name"
                         value={leadName}
                         onChange={(e) => setLeadName(e.target.value)}
-                        className="w-full py-2 px-3 rounded-lg text-xs bg-slate-900 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:border-[#0066CC]"
+                        className="w-full py-2 px-3 rounded-lg text-xs bg-slate-900 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:border-orange-500"
                       />
                       <input
                         type="tel"
@@ -402,12 +402,12 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
                         placeholder="Phone / WhatsApp Number *"
                         value={leadPhone}
                         onChange={(e) => setLeadPhone(e.target.value)}
-                        className="w-full py-2 px-3 rounded-lg text-xs bg-slate-900 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:border-[#0066CC]"
+                        className="w-full py-2 px-3 rounded-lg text-xs bg-slate-900 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:border-orange-500"
                       />
                       <select
                         value={leadLocality}
                         onChange={(e) => setLeadLocality(e.target.value)}
-                        className="w-full py-2 px-3 rounded-lg text-xs bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-[#0066CC]"
+                        className="w-full py-2 px-3 rounded-lg text-xs bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-orange-500"
                       >
                         <option value="Krishna / Gudur / Maddipatla">Krishna District (Gudur / Maddipatla / Machilipatnam)</option>
                         <option value="Vijayawada / Guntur">Vijayawada &amp; Guntur Capital Region</option>
@@ -423,7 +423,7 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
 
                     <button
                       type="submit"
-                      className="w-full py-3 px-4 rounded-xl text-xs font-black uppercase tracking-wider text-white bg-gradient-to-r from-[#00A3FF] to-[#0066CC] hover:brightness-110 shadow-lg shadow-blue-500/25 cursor-pointer flex items-center justify-center gap-2"
+                      className="w-full py-3 px-4 rounded-xl text-xs font-black uppercase tracking-wider text-white bg-gradient-to-r from-orange-500 to-amber-600 hover:brightness-110 shadow-lg shadow-orange-500/25 cursor-pointer flex items-center justify-center gap-2"
                     >
                       <Download className="w-4 h-4 text-white" />
                       <span>Download Itemized BOQ &amp; Price Lock</span>

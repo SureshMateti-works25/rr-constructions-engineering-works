@@ -61,7 +61,7 @@ export const QCAuditModal: React.FC<QCAuditModalProps> = ({ isOpen, onClose }) =
             <a
               href={pdfUrl}
               download="RR_Constructions_Sample_QC_Audit_Report.pdf"
-              className="px-3.5 py-2 rounded-lg bg-gradient-to-r from-[#00A3FF] to-[#0066CC] hover:from-[#0092e6] hover:to-[#0055b3] text-white text-xs font-bold flex items-center gap-1.5 shadow-md shadow-blue-500/20 transition-all cursor-pointer"
+              className="px-3.5 py-2 rounded-lg bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white text-xs font-bold flex items-center gap-1.5 shadow-md shadow-orange-500/20 transition-all cursor-pointer"
               title="Download Stamped PDF"
             >
               <Download className="w-4 h-4" />
@@ -75,7 +75,7 @@ export const QCAuditModal: React.FC<QCAuditModalProps> = ({ isOpen, onClose }) =
               className="hidden sm:flex px-3 py-2 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-semibold items-center gap-1.5 transition-all cursor-pointer"
               title="Open PDF in new tab"
             >
-              <ExternalLink className="w-3.5 h-3.5 text-cyan-400" />
+              <ExternalLink className="w-3.5 h-3.5 text-orange-400" />
               <span>Open File</span>
             </a>
 

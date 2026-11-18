@@ -77,19 +77,19 @@ export const HomeDivisionsGrid: React.FC<HomeDivisionsGridProps> = ({
   ];
 
   return (
-    <section className="py-16 sm:py-20 bg-[#071527] relative border-b border-[#1E3A5F]/80">
+    <section className="py-16 sm:py-20 bg-slate-50 relative border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black tracking-wider uppercase bg-[#0066CC]/20 border border-cyan-400/30 text-cyan-300 mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black tracking-wider uppercase bg-orange-50 border border-orange-200 text-orange-700 mb-4">
+            <Sparkles className="w-3.5 h-3.5 text-orange-600" />
             <span>Our Services &amp; Capabilities</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-black text-[#0B2545] tracking-tight">
             Explore RR Constructions by Service &amp; Expertise
           </h2>
-          <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed">
             Review our engineering divisions, compare turnkey packages, test our live cost estimator, or inspect working architectural CAD designs.
           </p>
         </div>
@@ -102,32 +102,32 @@ export const HomeDivisionsGrid: React.FC<HomeDivisionsGridProps> = ({
               <div
                 key={sec.id}
                 onClick={() => onNavigate(sec.id)}
-                className="group relative rounded-2xl bg-gradient-to-b from-[#0F223D] to-[#0A1A2F] border border-[#1E3A5F] hover:border-cyan-400/60 p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-500/10 cursor-pointer flex flex-col justify-between"
+                className="group relative rounded-2xl bg-white border border-slate-200 hover:border-orange-500 p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-500/10 cursor-pointer flex flex-col justify-between shadow-xs"
               >
                 {/* Header with Icon and Badge */}
                 <div>
                   <div className="flex items-center justify-between gap-3 mb-4">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${sec.accentColor} flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-110 transition-transform`}>
+                    <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center text-orange-600 shadow-xs group-hover:scale-110 transition-transform">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-[10px] font-black uppercase tracking-wider text-cyan-300 bg-cyan-950/60 border border-cyan-500/30 px-2.5 py-1 rounded-full">
+                    <span className="text-[10px] font-black uppercase tracking-wider text-[#0B2545] bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-full">
                       {sec.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-orange-600 transition-colors">
                     {sec.title}
                   </h3>
 
-                  <p className="text-xs text-slate-300 mt-2 leading-relaxed">
+                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
                     {sec.desc}
                   </p>
 
                   {/* Bullet Highlights */}
-                  <div className="mt-4 pt-4 border-t border-[#1E3A5F]/60 space-y-2">
+                  <div className="mt-4 pt-4 border-t border-slate-100 space-y-2">
                     {sec.highlights.map((hl, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-[11px] text-slate-300">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                      <div key={idx} className="flex items-center gap-2 text-[11px] text-slate-600">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                         <span>{hl}</span>
                       </div>
                     ))}
@@ -135,9 +135,9 @@ export const HomeDivisionsGrid: React.FC<HomeDivisionsGridProps> = ({
                 </div>
 
                 {/* Bottom CTA Button */}
-                <div className="mt-6 pt-4 border-t border-[#1E3A5F]/40 flex items-center justify-between text-xs font-bold text-cyan-400 group-hover:text-cyan-300">
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-orange-600 group-hover:text-orange-700">
                   <span>{sec.ctaText}</span>
-                  <div className="w-7 h-7 rounded-lg bg-[#16335C] group-hover:bg-[#0066CC] flex items-center justify-center text-white transition-colors">
+                  <div className="w-7 h-7 rounded-lg bg-orange-50 group-hover:bg-orange-500 group-hover:text-white flex items-center justify-center text-orange-600 transition-colors">
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </div>
@@ -145,10 +145,10 @@ export const HomeDivisionsGrid: React.FC<HomeDivisionsGridProps> = ({
             );
           })}
 
-          {/* Quick Action Card (Flyer & VIP Visit) */}
-          <div className="rounded-2xl bg-gradient-to-br from-[#0066CC]/20 via-[#0B2545] to-[#071527] border-2 border-cyan-400/40 p-6 sm:p-7 flex flex-col justify-between shadow-lg shadow-cyan-500/10">
+          {/* Quick Action Card (Flyer & VIP Visit) - Secondary Navy Structure */}
+          <div className="rounded-2xl bg-gradient-to-br from-[#0B2545] via-[#0F1E36] to-[#0B2545] border border-slate-700 p-6 sm:p-7 flex flex-col justify-between shadow-xl text-white">
             <div>
-              <div className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-wider text-amber-300 bg-amber-950/40 border border-amber-500/30 px-2.5 py-1 rounded-full mb-4">
+              <div className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-wider text-amber-300 bg-orange-500/20 border border-orange-400/30 px-2.5 py-1 rounded-full mb-4">
                 <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
                 <span>Visiting Card Handout</span>
               </div>
@@ -166,7 +166,7 @@ export const HomeDivisionsGrid: React.FC<HomeDivisionsGridProps> = ({
               <button
                 type="button"
                 onClick={onOpenFlyer}
-                className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#0066CC] to-[#00A3FF] hover:brightness-110 transition-all cursor-pointer shadow-md flex items-center justify-center gap-2"
+                className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 transition-all cursor-pointer shadow-md flex items-center justify-center gap-2"
               >
                 <span>Download Print-Ready Flyer</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -175,7 +175,7 @@ export const HomeDivisionsGrid: React.FC<HomeDivisionsGridProps> = ({
               <button
                 type="button"
                 onClick={onOpenConsultation}
-                className="w-full py-2 px-4 rounded-xl text-xs font-bold text-cyan-300 bg-[#0F223D] hover:bg-[#16335C] border border-[#1E3A5F] transition-all cursor-pointer flex items-center justify-center gap-2"
+                className="w-full py-2 px-4 rounded-xl text-xs font-bold text-slate-200 bg-white/10 hover:bg-white/20 border border-white/20 transition-all cursor-pointer flex items-center justify-center gap-2"
               >
                 <span>Book VIP Site Consultation</span>
               </button>

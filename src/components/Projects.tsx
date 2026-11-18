@@ -45,7 +45,7 @@ export const Projects: React.FC<ProjectsProps> = ({
             <span className="text-xs font-bold uppercase tracking-widest text-[#EA580C] bg-orange-50 px-3.5 py-1 rounded-full border border-orange-200">
               Hyderabad Project Showcase
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2545] tracking-tight">
               Real Homes Built Across Hyderabad
             </h2>
             <p className="text-slate-600 text-sm sm:text-base max-w-2xl">

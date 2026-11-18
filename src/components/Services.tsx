@@ -92,13 +92,13 @@ export const Services: React.FC<ServicesProps> = ({ onOpenConsultation }) => {
   };
 
   return (
-    <section id="services" className="py-20 md:py-28 bg-[#071527] text-white relative overflow-hidden border-t border-[#1E3A5F]">
+    <section id="services" className="py-20 md:py-28 bg-slate-50 text-slate-900 relative overflow-hidden border-t border-slate-200">
       
       {/* Background Blueprint Grid */}
       <div 
-        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
-          backgroundImage: `linear-gradient(#00A3FF 1px, transparent 1px), linear-gradient(90deg, #00A3FF 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(#0B2545 1px, transparent 1px), linear-gradient(90deg, #0B2545 1px, transparent 1px)`,
           backgroundSize: '36px 36px'
         }}
       />
@@ -108,29 +108,29 @@ export const Services: React.FC<ServicesProps> = ({ onOpenConsultation }) => {
         {/* Section Header styled exactly like Page 2 of the flyer */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-3 mb-2">
-            <span className="h-0.5 w-12 sm:w-20 bg-gradient-to-r from-transparent to-[#00A3FF]" />
-            <span className="font-serif italic text-2xl sm:text-3xl text-cyan-400 font-medium">Our</span>
-            <span className="h-0.5 w-12 sm:w-20 bg-gradient-to-l from-transparent to-[#00A3FF]" />
+            <span className="h-0.5 w-12 sm:w-20 bg-gradient-to-r from-transparent to-orange-500" />
+            <span className="font-serif italic text-2xl sm:text-3xl text-orange-600 font-medium">Our</span>
+            <span className="h-0.5 w-12 sm:w-20 bg-gradient-to-l from-transparent to-orange-500" />
           </div>
 
           <div className="flex items-center justify-center gap-4">
-            <span className="hidden sm:inline-block h-1 w-16 bg-[#00A3FF] rounded-full" />
-            <h2 className="text-3xl sm:text-5xl font-black tracking-wider uppercase text-white drop-shadow-md">
+            <span className="hidden sm:inline-block h-1 w-16 bg-orange-500 rounded-full" />
+            <h2 className="text-3xl sm:text-5xl font-black tracking-wider uppercase text-[#0B2545]">
               SERVICES
             </h2>
-            <span className="hidden sm:inline-block h-1 w-16 bg-[#00A3FF] rounded-full" />
+            <span className="hidden sm:inline-block h-1 w-16 bg-orange-500 rounded-full" />
           </div>
 
           {/* Sub-tagline from flyer */}
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-widest text-cyan-300">
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-widest text-orange-600">
             <span>BUILDING IDEAS</span>
-            <span className="text-[#00A3FF]">|</span>
+            <span className="text-slate-300">|</span>
             <span>CREATING SPACES</span>
-            <span className="text-[#00A3FF]">|</span>
+            <span className="text-slate-300">|</span>
             <span>SHAPING TOMORROW</span>
           </div>
 
-          <p className="mt-3 text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed font-normal">
+          <p className="mt-3 text-slate-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed font-normal">
             Delivering high-tensile structural engineering, turnkey civil construction, AutoCAD designing, and industrial performance flooring across Andhra Pradesh and Telangana.
           </p>
         </div>
@@ -147,43 +147,43 @@ export const Services: React.FC<ServicesProps> = ({ onOpenConsultation }) => {
             return (
               <article
                 key={service.id}
-                className="group rounded-2xl bg-[#0F1E36] border border-[#1E3A5F] hover:border-[#00A3FF] transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-blue-500/15"
+                className="group rounded-2xl bg-white border border-slate-200 hover:border-orange-500 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-md hover:shadow-2xl hover:shadow-orange-500/10"
               >
                 <div>
                   {/* Card Header matching Page 2 */}
-                  <div className="p-5 pb-3 border-b border-[#1E3A5F] flex items-center justify-between">
+                  <div className="p-5 pb-3 border-b border-slate-100 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#00A3FF] to-[#0052CC] text-white flex items-center justify-center shadow-md">
+                      <div className="w-11 h-11 rounded-xl bg-orange-50 border border-orange-100 text-orange-600 flex items-center justify-center shadow-xs">
                         {getIcon(service.iconName)}
                       </div>
                       <div>
-                        <div className="text-[10px] uppercase font-bold text-cyan-400 tracking-wider">
+                        <div className="text-[10px] uppercase font-bold text-orange-600 tracking-wider">
                           Pillar #{index + 1}
                         </div>
-                        <h3 className="text-xl font-black uppercase text-white tracking-tight">
+                        <h3 className="text-xl font-black uppercase text-slate-900 tracking-tight">
                           {service.title}
                         </h3>
                       </div>
                     </div>
 
-                    <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-[#071527] text-slate-300 border border-[#1E3A5F]">
+                    <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 border border-slate-200">
                       {service.timelineAvg}
                     </span>
                   </div>
 
                   {/* Interactive Big Working Image Container */}
-                  <div className="relative h-60 w-full overflow-hidden bg-slate-950">
+                  <div className="relative h-60 w-full overflow-hidden bg-slate-100">
                     <img
                       src={currentView.url}
                       alt={`${service.title} - ${currentView.label}`}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F1E36] via-[#0F1E36]/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent" />
 
                     {/* View Label Badge */}
                     <div className="absolute top-3 left-3">
-                      <span className="px-2.5 py-1 rounded-md bg-[#071527]/90 text-cyan-300 text-xs font-bold border border-blue-500/40 backdrop-blur-md">
+                      <span className="px-2.5 py-1 rounded-md bg-white/95 text-slate-900 text-xs font-bold border border-slate-200 backdrop-blur-md shadow-xs">
                         {currentView.label}
                       </span>
                     </div>
@@ -191,7 +191,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenConsultation }) => {
                     <button
                       type="button"
                       onClick={() => setActiveImagePreview(currentView.url)}
-                      className="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-[#071527]/80 hover:bg-[#071527] text-white text-xs font-medium backdrop-blur-md flex items-center gap-1 border border-[#1E3A5F]"
+                      className="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-slate-900/80 hover:bg-slate-900 text-white text-xs font-medium backdrop-blur-md flex items-center gap-1 border border-slate-700 cursor-pointer"
                     >
                       <Maximize2 className="w-3.5 h-3.5" />
                       <span>Zoom</span>
@@ -203,19 +203,19 @@ export const Services: React.FC<ServicesProps> = ({ onOpenConsultation }) => {
                   </div>
 
                   {/* Working Gallery Thumbnails Switcher */}
-                  <div className="px-5 py-2.5 bg-[#0B2545]/70 border-b border-[#1E3A5F] flex items-center gap-2 overflow-x-auto">
+                  <div className="px-5 py-2.5 bg-slate-50 border-b border-slate-200 flex items-center gap-2 overflow-x-auto">
                     {gallery.map((gItem, gIdx) => (
                       <button
                         key={gIdx}
                         type="button"
                         onClick={() => handleSelectServiceImage(service.id, gIdx)}
-                        className={`px-2.5 py-1 rounded-lg text-[11px] font-bold border transition-all flex items-center gap-1 shrink-0 ${
+                        className={`px-2.5 py-1 rounded-lg text-[11px] font-bold border transition-all flex items-center gap-1 shrink-0 cursor-pointer ${
                           currentImgIdx === gIdx
-                            ? 'bg-[#0066CC] text-white border-cyan-400 shadow-sm'
-                            : 'bg-[#071527] text-slate-300 border-[#1E3A5F] hover:text-white'
+                            ? 'bg-orange-500 text-white border-orange-500 shadow-xs'
+                            : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300'
                         }`}
                       >
-                        <ImageIcon className="w-3 h-3 text-cyan-400" />
+                        <ImageIcon className="w-3 h-3 text-orange-400" />
                         <span>{gItem.label}</span>
                       </button>
                     ))}
@@ -223,18 +223,18 @@ export const Services: React.FC<ServicesProps> = ({ onOpenConsultation }) => {
 
                   {/* Service Description & Scope Checklist */}
                   <div className="p-5 space-y-3">
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                       {service.description}
                     </p>
 
-                    <div className="space-y-1.5 pt-2 border-t border-[#1E3A5F]">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-cyan-300">
+                    <div className="space-y-1.5 pt-2 border-t border-slate-100">
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-[#0B2545]">
                         Capabilities &amp; Scope:
                       </div>
-                      <ul className="space-y-1 text-xs text-slate-200">
+                      <ul className="space-y-1 text-xs text-slate-600">
                         {service.deliverables.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <Check className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
+                            <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -248,14 +248,14 @@ export const Services: React.FC<ServicesProps> = ({ onOpenConsultation }) => {
                   <button
                     type="button"
                     onClick={() => setSelectedService(service)}
-                    className="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold text-slate-200 bg-[#071527] hover:bg-[#122846] border border-[#1E3A5F] transition-colors cursor-pointer text-center"
+                    className="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-200 transition-colors cursor-pointer text-center"
                   >
                     Specifications
                   </button>
                   <button
                     type="button"
                     onClick={() => onOpenConsultation(`Request Consultation for ${service.title}`)}
-                    className="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#00A3FF] via-[#0066CC] to-[#004099] hover:brightness-110 shadow-md shadow-blue-500/20 transition-all cursor-pointer flex items-center justify-center gap-1"
+                    className="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 shadow-md shadow-orange-500/20 transition-all cursor-pointer flex items-center justify-center gap-1"
                   >
                     <span>Get Free Estimate</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -267,8 +267,8 @@ export const Services: React.FC<ServicesProps> = ({ onOpenConsultation }) => {
           })}
         </div>
 
-        {/* Bottom Trust Pillars matching Page 2 of the flyer */}
-        <div className="mt-8 bg-gradient-to-r from-[#0B2545] via-[#0F1E36] to-[#0B2545] rounded-2xl border border-blue-500/30 p-6 md:p-8 shadow-2xl">
+        {/* Bottom Trust Pillars matching Page 2 of the flyer (Structured Navy Banner) */}
+        <div className="mt-8 bg-gradient-to-r from-[#0B2545] via-[#0F1E36] to-[#0B2545] rounded-2xl border border-slate-700 p-6 md:p-8 shadow-2xl text-white">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {TRUST_PILLARS.map((pillar) => (
               <div key={pillar.id} className="flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">

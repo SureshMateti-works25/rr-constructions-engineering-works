@@ -248,9 +248,9 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
 
             <button
               type="submit"
-              className="w-full py-3.5 px-4 rounded-xl font-black text-sm text-white bg-gradient-to-r from-[#00A3FF] via-[#0066CC] to-[#004099] hover:brightness-110 shadow-lg shadow-blue-500/25 transition-all cursor-pointer flex items-center justify-center gap-2"
+              className="w-full py-3.5 px-4 rounded-xl font-black text-sm text-white bg-gradient-to-r from-orange-500 via-amber-500 to-amber-600 hover:brightness-110 shadow-lg shadow-orange-500/25 transition-all cursor-pointer flex items-center justify-center gap-2"
             >
-              <Sparkles className="w-4 h-4 text-cyan-300" />
+              <Sparkles className="w-4 h-4 text-white" />
               <span>Confirm Free Consultation with Engineering Team</span>
             </button>
 

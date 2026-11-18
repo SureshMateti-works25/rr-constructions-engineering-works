@@ -43,8 +43,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 no-print ${
           isScrolled
-            ? 'bg-gradient-to-r from-[#05111F]/98 via-[#081B33]/98 to-[#05111F]/98 backdrop-blur-xl border-b border-cyan-500/25 shadow-[0_10px_35px_rgba(0,0,0,0.6)] py-2 sm:py-2.5'
-            : 'bg-gradient-to-r from-[#061426]/95 via-[#0A2242]/95 to-[#061426]/95 backdrop-blur-md border-b border-cyan-500/20 py-3 sm:py-4 shadow-xl'
+            ? 'bg-[#0B2545]/98 backdrop-blur-xl border-b border-slate-700/60 shadow-[0_10px_35px_rgba(0,0,0,0.4)] py-2 sm:py-2.5'
+            : 'bg-[#0B2545]/95 backdrop-blur-md border-b border-slate-700/40 py-3 sm:py-4 shadow-xl'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,11 +60,11 @@ export const Navbar: React.FC<NavbarProps> = ({
               <RRLogo size="md" showTagline={false} />
               
               {/* Official Credentials Badge (visible on larger screens) */}
-              <div className="hidden 2xl:flex flex-col border-l border-[#1E3A5F] pl-3 py-0.5">
-                <span className="text-[11px] font-bold text-cyan-300 tracking-wider">
+              <div className="hidden 2xl:flex flex-col border-l border-slate-700 pl-3 py-0.5">
+                <span className="text-[11px] font-bold text-amber-300 tracking-wider">
                   {COMPANY_INFO.proprietor} ({COMPANY_INFO.proprietorTitle})
                 </span>
-                <span className="text-[10px] text-slate-400 font-mono flex items-center gap-1 mt-0.5">
+                <span className="text-[10px] text-slate-300 font-mono flex items-center gap-1 mt-0.5">
                   <ShieldCheck className="w-3 h-3 text-emerald-400" />
                   GST: {COMPANY_INFO.gstin}
                 </span>
@@ -79,8 +79,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => onNavigate('home')}
                 className={`p-2 rounded-xl transition-all cursor-pointer ${
                   currentPage === 'home'
-                    ? 'bg-[#0066CC] text-white shadow-md shadow-blue-500/25 ring-1 ring-cyan-400/50'
-                    : 'text-slate-300 hover:text-cyan-300 hover:bg-[#0B2545]'
+                    ? 'bg-orange-500 text-white shadow-md shadow-orange-500/25 ring-1 ring-amber-400/50'
+                    : 'text-slate-200 hover:text-white hover:bg-white/10'
                 }`}
                 title="Home Page"
                 aria-label="Home Page"
@@ -97,15 +97,15 @@ export const Navbar: React.FC<NavbarProps> = ({
                     onClick={() => onNavigate(item.id)}
                     className={`px-3.5 py-2 rounded-xl transition-all cursor-pointer relative group text-sm font-bold ${
                       isActive
-                        ? 'bg-gradient-to-r from-[#0066CC] to-[#00A3FF] text-white shadow-md shadow-blue-500/25 ring-1 ring-cyan-400/50'
-                        : 'text-slate-200 hover:text-cyan-300 hover:bg-[#0B2545]'
+                        ? 'bg-gradient-to-r from-orange-500 to-amber-600 text-white shadow-md shadow-orange-500/25 ring-1 ring-amber-300/40'
+                        : 'text-slate-200 hover:text-white hover:bg-white/10'
                     }`}
                   >
                     <span>{item.label}</span>
                     {isActive ? (
-                      <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-cyan-300 rounded-full" />
+                      <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-amber-200 rounded-full" />
                     ) : (
-                      <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-[#00A3FF] scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full" />
+                      <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-orange-400 scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full" />
                     )}
                   </button>
                 );
@@ -117,9 +117,9 @@ export const Navbar: React.FC<NavbarProps> = ({
               {/* Phone Hotline with Visiting Card number */}
               <a
                 href={`tel:${COMPANY_INFO.phone.replace(/[^0-9+]/g, '')}`}
-                className="hidden xl:flex items-center gap-2 text-xs font-bold text-slate-200 hover:text-cyan-300 px-3 py-2 rounded-xl bg-[#0F1E36] border border-[#1E3A5F] transition-colors"
+                className="hidden xl:flex items-center gap-2 text-xs font-bold text-slate-200 hover:text-white px-3 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 transition-colors"
               >
-                <div className="w-6 h-6 rounded-full bg-[#0066CC] flex items-center justify-center text-white">
+                <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-white">
                   <Phone className="w-3 h-3" />
                 </div>
                 <span>{COMPANY_INFO.phone}</span>
@@ -129,20 +129,20 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 type="button"
                 onClick={onOpenFlyer}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-cyan-300 bg-blue-900/30 hover:bg-blue-800/40 border border-blue-500/40 rounded-xl transition-all cursor-pointer shadow-sm hover:scale-[1.02]"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-slate-200 hover:text-white bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl transition-all cursor-pointer shadow-sm hover:scale-[1.02]"
                 title="View & Download Official Printable Flyer"
               >
-                <FileText className="w-3.5 h-3.5 text-cyan-400" />
+                <FileText className="w-3.5 h-3.5 text-amber-400" />
                 <span>Download Flyer</span>
               </button>
 
-              {/* Quote CTA */}
+              {/* Quote CTA (Accent Orange) */}
               <button
                 type="button"
                 onClick={onOpenConsultation}
-                className="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-[#00A3FF] via-[#0066CC] to-[#004099] hover:brightness-110 rounded-xl shadow-md shadow-blue-500/25 transition-all cursor-pointer hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 rounded-xl shadow-md shadow-orange-500/25 transition-all cursor-pointer hover:scale-[1.02]"
               >
-                <Sparkles className="w-3.5 h-3.5 text-cyan-300" />
+                <Sparkles className="w-3.5 h-3.5 text-amber-200" />
                 <span>Get Free Quote</span>
               </button>
             </div>
@@ -152,7 +152,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 type="button"
                 onClick={onOpenFlyer}
-                className="p-2 text-cyan-400 bg-[#0F223D] border border-[#1E3A5F] rounded-lg"
+                className="p-2 text-slate-200 bg-white/10 border border-white/20 rounded-lg"
                 title="Flyer"
               >
                 <FileText className="w-4 h-4" />
@@ -179,9 +179,9 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="fixed inset-0 bg-black/80 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
           />
-          <div className="fixed top-0 right-0 bottom-0 w-5/6 max-w-sm bg-[#071527] border-l border-[#1E3A5F] p-6 shadow-2xl overflow-y-auto flex flex-col justify-between">
+          <div className="fixed top-0 right-0 bottom-0 w-5/6 max-w-sm bg-[#0B2545] border-l border-slate-700 p-6 shadow-2xl overflow-y-auto flex flex-col justify-between text-white">
             <div>
-              <div className="flex items-center justify-between pb-4 border-b border-[#1E3A5F]">
+              <div className="flex items-center justify-between pb-4 border-b border-slate-700">
                 <RRLogo size="sm" showTagline={false} />
                 <button
                   type="button"
@@ -193,15 +193,15 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
 
               {/* Proprietor & GST credentials badge in mobile drawer */}
-              <div className="py-3 px-3.5 my-4 bg-[#0B2545] rounded-xl border border-[#1E3A5F] text-xs">
+              <div className="py-3 px-3.5 my-4 bg-white/10 rounded-xl border border-white/15 text-xs">
                 <div className="font-bold text-white flex items-center justify-between">
                   <span>{COMPANY_INFO.proprietor}</span>
-                  <span className="text-[10px] text-cyan-400 font-extrabold uppercase bg-blue-900/40 px-2 py-0.5 rounded border border-blue-500/30">
+                  <span className="text-[10px] text-amber-300 font-extrabold uppercase bg-orange-500/30 px-2 py-0.5 rounded border border-orange-400/40">
                     {COMPANY_INFO.proprietorTitle}
                   </span>
                 </div>
                 <div className="text-[11px] text-slate-300 font-mono mt-1">GSTIN: {COMPANY_INFO.gstin}</div>
-                <div className="text-[10px] text-slate-400 mt-1">
+                <div className="text-[10px] text-slate-300 mt-1">
                   Maddipatla, Krishna Dist, AP • Shamirpeta, Medchal Dist, Telangana
                 </div>
               </div>
@@ -216,16 +216,16 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }}
                   className={`w-full text-left px-4 py-3 rounded-xl text-base font-bold transition-colors cursor-pointer flex items-center justify-between ${
                     currentPage === 'home'
-                      ? 'bg-[#0066CC] text-white shadow-md'
-                      : 'text-slate-200 hover:bg-[#0B2545] hover:text-cyan-300'
+                      ? 'bg-orange-500 text-white shadow-md'
+                      : 'text-slate-200 hover:bg-white/10 hover:text-white'
                   }`}
                 >
                   <span className="flex items-center gap-2.5">
-                    <Home className="w-4 h-4 text-cyan-400" />
+                    <Home className="w-4 h-4 text-amber-300" />
                     <span>Home Page</span>
                   </span>
                   {currentPage === 'home' && (
-                    <span className="text-xs text-cyan-200 bg-white/20 px-2 py-0.5 rounded-full">Active</span>
+                    <span className="text-xs text-amber-100 bg-black/20 px-2 py-0.5 rounded-full">Active</span>
                   )}
                 </button>
 
@@ -241,13 +241,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                       }}
                       className={`w-full text-left px-4 py-3 rounded-xl text-base font-bold transition-colors cursor-pointer flex items-center justify-between ${
                         isActive
-                          ? 'bg-[#0066CC] text-white shadow-md'
-                          : 'text-slate-200 hover:bg-[#0B2545] hover:text-cyan-300'
+                          ? 'bg-gradient-to-r from-orange-500 to-amber-600 text-white shadow-md'
+                          : 'text-slate-200 hover:bg-white/10 hover:text-white'
                       }`}
                     >
                       <span>{item.label}</span>
                       {isActive && (
-                        <span className="text-xs text-cyan-200 bg-white/20 px-2 py-0.5 rounded-full">Viewing</span>
+                        <span className="text-xs text-amber-100 bg-black/20 px-2 py-0.5 rounded-full">Viewing</span>
                       )}
                     </button>
                   );
@@ -255,12 +255,12 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
             </div>
 
-            <div className="pt-6 border-t border-[#1E3A5F] space-y-3">
+            <div className="pt-6 border-t border-slate-700 space-y-3">
               <a
                 href={`tel:${COMPANY_INFO.phone.replace(/[^0-9+]/g, '')}`}
-                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#0B2545] text-cyan-300 border border-[#1E3A5F] text-xs font-bold"
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/10 text-slate-200 border border-white/20 text-xs font-bold"
               >
-                <Phone className="w-4 h-4 text-cyan-400" />
+                <Phone className="w-4 h-4 text-orange-400" />
                 <span>Call: {COMPANY_INFO.phone}</span>
               </a>
 
@@ -270,9 +270,9 @@ export const Navbar: React.FC<NavbarProps> = ({
                   setMobileMenuOpen(false);
                   onOpenFlyer();
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-blue-900/30 text-cyan-300 border border-blue-500/40 text-xs font-bold"
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/10 text-slate-200 border border-white/20 text-xs font-bold"
               >
-                <FileText className="w-4 h-4" />
+                <FileText className="w-4 h-4 text-amber-400" />
                 <span>View &amp; Print Official Flyer</span>
               </button>
 
@@ -282,7 +282,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   setMobileMenuOpen(false);
                   onOpenConsultation();
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#00A3FF] via-[#0066CC] to-[#004099] text-white text-xs font-bold shadow-lg shadow-blue-500/25"
+                className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white text-xs font-bold shadow-lg shadow-orange-500/25"
               >
                 <Sparkles className="w-4 h-4" />
                 <span>Get Free Quote &amp; 3D Plan</span>

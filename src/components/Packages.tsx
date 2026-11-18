@@ -19,10 +19,10 @@ export const Packages: React.FC<PackagesProps> = ({
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0066CC] bg-blue-50 px-3.5 py-1 rounded-full border border-blue-200">
+          <span className="text-xs font-bold uppercase tracking-widest text-orange-700 bg-orange-50 px-3.5 py-1 rounded-full border border-orange-200 shadow-xs">
             Transparent Pricing • Zero Hidden Costs
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2545] tracking-tight">
             Turnkey Construction Packages — AP &amp; Telangana
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
@@ -38,12 +38,12 @@ export const Packages: React.FC<PackagesProps> = ({
               key={pkg.id}
               className={`rounded-2xl flex flex-col justify-between p-6 transition-all duration-300 relative ${
                 pkg.popular
-                  ? 'bg-white border-2 border-[#0066CC] shadow-xl shadow-blue-500/10 scale-102 ring-4 ring-blue-500/10'
-                  : 'bg-white border border-slate-200 hover:border-slate-300 shadow-sm'
+                  ? 'bg-white border-2 border-orange-500 shadow-xl shadow-orange-500/10 scale-102 ring-4 ring-orange-500/10'
+                  : 'bg-white border border-slate-200 hover:border-slate-300 shadow-xs hover:shadow-md'
               }`}
             >
               {pkg.popular && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#00A3FF] to-[#0066CC] text-white font-extrabold text-[10px] uppercase tracking-wider py-1 px-3.5 rounded-full shadow-md flex items-center gap-1">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-500 to-amber-600 text-white font-extrabold text-[10px] uppercase tracking-wider py-1 px-3.5 rounded-full shadow-md flex items-center gap-1">
                   <Sparkles className="w-3 h-3 text-white" />
                   <span>Most Chosen Package</span>
                 </div>
@@ -51,10 +51,10 @@ export const Packages: React.FC<PackagesProps> = ({
 
               <div className="space-y-4">
                 <div>
-                  <span className="text-xs font-bold tracking-wider uppercase text-[#0066CC]">
+                  <span className="text-xs font-bold tracking-wider uppercase text-orange-600">
                     {pkg.tier}
                   </span>
-                  <h3 className="font-sans font-bold text-xl text-slate-900 mt-1">
+                  <h3 className="font-sans font-bold text-xl text-[#0B2545] mt-1">
                     {pkg.name}
                   </h3>
                   <p className="text-xs text-slate-600 mt-1 min-h-[36px]">
@@ -65,7 +65,7 @@ export const Packages: React.FC<PackagesProps> = ({
                 {/* Pricing Block */}
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-3xl font-black text-slate-900 font-sans">
+                    <span className="text-3xl font-black text-[#0B2545] font-sans">
                       {pkg.currencySymbol}{pkg.ratePerSqFt.toLocaleString()}
                     </span>
                     <span className="text-xs text-slate-500 font-semibold">/ sq.ft</span>
@@ -87,7 +87,7 @@ export const Packages: React.FC<PackagesProps> = ({
                   <ul className="space-y-2 text-xs text-slate-700">
                     {pkg.highlights.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <Check className="w-4 h-4 text-[#0066CC] shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 text-orange-600 shrink-0 mt-0.5" />
                         <span className="line-clamp-2">{item}</span>
                       </li>
                     ))}
@@ -102,8 +102,8 @@ export const Packages: React.FC<PackagesProps> = ({
                   onClick={() => onSelectPackageForEstimator(pkg.id)}
                   className={`w-full py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
                     pkg.popular
-                      ? 'bg-gradient-to-r from-[#00A3FF] to-[#0066CC] text-white hover:brightness-110 shadow-md shadow-blue-500/25'
-                      : 'bg-slate-900 text-white hover:bg-slate-800'
+                      ? 'bg-gradient-to-r from-orange-500 to-amber-600 text-white hover:brightness-110 shadow-md shadow-orange-500/20'
+                      : 'bg-[#0B2545] text-white hover:bg-[#152a48]'
                   }`}
                 >
                   <Calculator className="w-3.5 h-3.5" />
@@ -113,7 +113,7 @@ export const Packages: React.FC<PackagesProps> = ({
                 <button
                   type="button"
                   onClick={() => onOpenConsultation(`Inquiry for ${pkg.name} (${pkg.currencySymbol}${pkg.ratePerSqFt}/sq.ft)`)}
-                  className="w-full py-2 px-3 rounded-lg text-[11px] font-bold text-slate-600 hover:text-[#0066CC] transition-colors cursor-pointer text-center"
+                  className="w-full py-2 px-3 rounded-lg text-[11px] font-bold text-slate-600 hover:text-orange-600 transition-colors cursor-pointer text-center"
                 >
                   Get Detailed Itemized BOQ →
                 </button>
@@ -127,9 +127,9 @@ export const Packages: React.FC<PackagesProps> = ({
           <button
             type="button"
             onClick={() => setShowComparisonTable(!showComparisonTable)}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-[#0066CC] bg-blue-50 hover:bg-blue-100 border border-blue-200 transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-orange-700 bg-orange-50 hover:bg-orange-100 border border-orange-200 transition-all cursor-pointer"
           >
-            <Info className="w-4 h-4 text-[#0066CC]" />
+            <Info className="w-4 h-4 text-orange-600" />
             <span>
               {showComparisonTable
                 ? 'Hide Side-by-Side Comparison'

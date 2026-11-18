@@ -16,7 +16,7 @@ export const Process: React.FC = () => {
           <span className="text-xs font-bold uppercase tracking-widest text-[#EA580C] bg-orange-50 px-3.5 py-1 rounded-full border border-orange-200">
             Predictable Construction Workflow
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2545] tracking-tight">
             Our 6-Stage Construction Journey with 430+ QC Checks
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">

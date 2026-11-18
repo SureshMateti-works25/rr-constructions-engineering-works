@@ -92,7 +92,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#071527] text-slate-100 flex flex-col font-sans selection:bg-[#0066CC] selection:text-white">
+    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 flex flex-col font-sans selection:bg-orange-500 selection:text-white">
       
       {/* Top Fixed Sticky Navigation with Active Page Indicators */}
       <Navbar
@@ -130,19 +130,19 @@ export function App() {
             {/* Strategic Partners & Bank Approvals */}
             <Partners />
 
-            {/* Home Bottom VIP Callout */}
-            <section className="py-16 bg-gradient-to-r from-[#0066CC] via-[#004B99] to-[#071527] border-y border-cyan-400/30">
+            {/* Home Bottom VIP Callout (Structured Navy Background with Warm Amber Accent) */}
+            <section className="py-16 bg-gradient-to-r from-[#0B2545] via-[#0F1E36] to-[#0B2545] text-white border-y border-slate-700/40">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
                   <div className="space-y-2 max-w-2xl">
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-white/10 text-cyan-200 border border-white/20">
-                      <Sparkles className="w-3.5 h-3.5 text-cyan-300" />
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-orange-500/20 text-amber-300 border border-orange-400/30">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-400" />
                       <span>Ready to Build Your Dream Home?</span>
                     </div>
                     <h3 className="text-2xl sm:text-3xl font-black text-white">
                       Start with a Free On-Site Soil &amp; Plot Survey
                     </h3>
-                    <p className="text-sm text-cyan-100 leading-relaxed">
+                    <p className="text-sm text-slate-200 leading-relaxed">
                       Consult directly with Proprietor {COMPANY_INFO.proprietor} across Andhra Pradesh (Krishna, Guntur, Vijayawada) and Telangana (Hyderabad). Zero obligations, 100% transparent itemized BOQ estimation.
                     </p>
                   </div>
@@ -151,7 +151,7 @@ export function App() {
                     <button
                       type="button"
                       onClick={() => handleOpenConsultation('Site Survey from Home CTA')}
-                      className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-black uppercase tracking-wider text-[#071527] bg-white hover:bg-cyan-100 transition-all shadow-xl hover:scale-105 cursor-pointer flex items-center gap-2"
+                      className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-black uppercase tracking-wider text-white bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 transition-all shadow-xl hover:scale-105 cursor-pointer flex items-center gap-2"
                     >
                       <span>Book Free Site Survey</span>
                       <ArrowRight className="w-4 h-4" />
@@ -159,7 +159,7 @@ export function App() {
                     <button
                       type="button"
                       onClick={() => setIsFlyerOpen(true)}
-                      className="px-5 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-blue-950/60 hover:bg-blue-900 border border-white/30 transition-all cursor-pointer"
+                      className="px-5 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20 transition-all cursor-pointer"
                     >
                       <span>Print Visiting Flyer</span>
                     </button>
@@ -286,85 +286,89 @@ export function App() {
             {/* Builder FAQ Accordion */}
             <FaqSection />
 
-            {/* Dedicated Office & Contact Directory Section */}
-            <section className="py-16 bg-[#0B1E38] border-t border-[#1E3A5F]">
+            {/* Dedicated Office & Contact Directory Section (Dominant Soft Grey with Crisp White Cards) */}
+            <section className="py-16 bg-slate-50 border-t border-slate-200">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                   
                   {/* Left: Office Address & Visiting Card Credentials */}
                   <div className="space-y-6">
                     <div>
-                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-900/40 text-cyan-300 border border-blue-500/30 mb-3">
-                        <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-orange-50 text-orange-700 border border-orange-200 mb-3">
+                        <ShieldCheck className="w-4 h-4 text-emerald-600" />
                         <span>Registered Office Locations</span>
                       </div>
-                      <h3 className="text-2xl sm:text-3xl font-black text-white">
+                      <h3 className="text-2xl sm:text-3xl font-black text-[#0B2545]">
                         Connect with RR Constructions
                       </h3>
-                      <p className="mt-2 text-sm text-slate-300">
-                        Headed by Proprietor <strong className="text-white">{COMPANY_INFO.proprietor}</strong>. We welcome homeowners and commercial clients to our regional centers or invite us for a free site inspection.
+                      <p className="mt-2 text-sm text-slate-600">
+                        Headed by Proprietor <strong className="text-slate-900">{COMPANY_INFO.proprietor}</strong>. We welcome homeowners and commercial clients to our regional centers or invite us for a free site inspection.
                       </p>
                     </div>
 
                     <div className="space-y-4">
-                      <div className="p-4 rounded-xl bg-[#071527] border border-[#1E3A5F] flex items-start gap-3">
-                        <MapPin className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
+                      <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-start gap-3">
+                        <MapPin className="w-5 h-5 text-orange-600 shrink-0 mt-0.5" />
                         <div>
-                          <h4 className="text-sm font-bold text-white">Head Office (Krishna District, AP)</h4>
-                          <p className="text-xs text-slate-300 mt-1">{COMPANY_INFO.headOffice}</p>
-                          <span className="text-[10px] text-cyan-300 font-mono mt-1 inline-block">GSTIN: {COMPANY_INFO.gstin}</span>
+                          <h4 className="text-sm font-bold text-slate-900">Head Office (Krishna District, AP)</h4>
+                          <p className="text-xs text-slate-600 mt-1">{COMPANY_INFO.headOffice}</p>
+                          <span className="text-[10px] text-slate-500 font-mono mt-1 inline-block">GSTIN: {COMPANY_INFO.gstin}</span>
                         </div>
                       </div>
 
-                      <div className="p-4 rounded-xl bg-[#071527] border border-[#1E3A5F] flex items-start gap-3">
-                        <MapPin className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
+                      <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-start gap-3">
+                        <MapPin className="w-5 h-5 text-orange-600 shrink-0 mt-0.5" />
                         <div>
-                          <h4 className="text-sm font-bold text-white">Telangana Regional Hub (Medchal-Malkajgiri)</h4>
-                          <p className="text-xs text-slate-300 mt-1">{COMPANY_INFO.hyderabadHub}</p>
+                          <h4 className="text-sm font-bold text-slate-900">Telangana Regional Hub (Medchal-Malkajgiri)</h4>
+                          <p className="text-xs text-slate-600 mt-1">{COMPANY_INFO.hyderabadHub}</p>
                         </div>
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <a
                           href={`tel:${COMPANY_INFO.phone.replace(/[^0-9+]/g, '')}`}
-                          className="p-4 rounded-xl bg-[#071527] border border-[#1E3A5F] hover:border-cyan-400 transition-colors flex items-center gap-3"
+                          className="p-4 rounded-xl bg-white border border-slate-200 hover:border-orange-500 hover:shadow-md transition-all flex items-center gap-3 cursor-pointer group"
                         >
-                          <Phone className="w-5 h-5 text-emerald-400" />
+                          <div className="w-10 h-10 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center shrink-0 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+                            <Phone className="w-5 h-5" />
+                          </div>
                           <div>
-                            <div className="text-[10px] text-slate-400 uppercase font-bold">Direct Phone Hotline</div>
-                            <div className="text-xs font-bold text-white font-mono">{COMPANY_INFO.phone}</div>
+                            <div className="text-[10px] text-slate-500 uppercase font-bold">Direct Phone Hotline</div>
+                            <div className="text-xs font-bold text-slate-900 font-mono">{COMPANY_INFO.phone}</div>
                           </div>
                         </a>
 
                         <a
                           href={`mailto:${COMPANY_INFO.email}`}
-                          className="p-4 rounded-xl bg-[#071527] border border-[#1E3A5F] hover:border-cyan-400 transition-colors flex items-center gap-3"
+                          className="p-4 rounded-xl bg-white border border-slate-200 hover:border-orange-500 hover:shadow-md transition-all flex items-center gap-3 cursor-pointer group"
                         >
-                          <Mail className="w-5 h-5 text-cyan-400" />
+                          <div className="w-10 h-10 rounded-lg bg-blue-50 text-[#0066CC] flex items-center justify-center shrink-0 group-hover:bg-[#0066CC] group-hover:text-white transition-colors">
+                            <Mail className="w-5 h-5" />
+                          </div>
                           <div>
-                            <div className="text-[10px] text-slate-400 uppercase font-bold">Official Email</div>
-                            <div className="text-xs font-bold text-white">{COMPANY_INFO.email}</div>
+                            <div className="text-[10px] text-slate-500 uppercase font-bold">Official Email</div>
+                            <div className="text-xs font-bold text-slate-900">{COMPANY_INFO.email}</div>
                           </div>
                         </a>
                       </div>
                     </div>
                   </div>
 
-                  {/* Right: Instant Consultation Booking Box */}
-                  <div className="p-6 sm:p-8 rounded-2xl bg-[#071527] border-2 border-cyan-400/40 shadow-2xl">
+                  {/* Right: Instant Consultation Booking Box (Structured Navy Card with Accent Orange Button) */}
+                  <div className="p-6 sm:p-8 rounded-2xl bg-[#0B2545] border border-slate-700 shadow-2xl text-white">
                     <h4 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-cyan-400" />
+                      <Sparkles className="w-4 h-4 text-amber-400" />
                       <span>Schedule a Consultation</span>
                     </h4>
-                    <p className="text-xs text-slate-300 mb-6">
+                    <p className="text-xs text-slate-300 mb-6 leading-relaxed">
                       Get a custom 2D floor plan concept, turnkey cost estimate, or industrial steel fabrication proposal within 24 hours.
                     </p>
 
-                    <div className="space-y-4">
+                    <div className="space-y-3.5">
                       <button
                         type="button"
                         onClick={() => handleOpenConsultation('Inquiry from FAQ Contact Desk')}
-                        className="w-full py-3.5 px-4 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-[#00A3FF] via-[#0066CC] to-[#004099] hover:brightness-110 shadow-lg shadow-blue-500/25 transition-all cursor-pointer flex items-center justify-center gap-2"
+                        className="w-full py-3.5 px-4 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 shadow-lg shadow-orange-500/25 transition-all cursor-pointer flex items-center justify-center gap-2"
                       >
                         <span>Book In-Person / Online Meeting</span>
                         <ArrowRight className="w-4 h-4" />
@@ -373,7 +377,7 @@ export function App() {
                       <button
                         type="button"
                         onClick={() => setIsFlyerOpen(true)}
-                        className="w-full py-3 px-4 rounded-xl font-bold text-xs text-cyan-300 bg-[#0F223D] hover:bg-[#16335C] border border-[#1E3A5F] transition-all cursor-pointer flex items-center justify-center gap-2"
+                        className="w-full py-3 px-4 rounded-xl font-bold text-xs text-slate-200 bg-white/10 hover:bg-white/20 border border-white/20 transition-all cursor-pointer flex items-center justify-center gap-2"
                       >
                         <span>Download 2-Page Official Flyer</span>
                       </button>
